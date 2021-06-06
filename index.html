@@ -55,22 +55,31 @@
             <div class="cours p-3">
                 <div class="scrollspy-lecons shadow mb-4">
                     <div class="row">
-                      <div class="col-4">
-                        <nav id="lecons-nav" class="navbar navbar-light bg-dark flex-column align-items-stretch p-3">
+                      <div class="col-sm-12 col-md-4 bg-dark">
+                        <nav id="lecons-nav" class="navbar flex-column align-items-stretch p-3">
                           <h4 class="display-4">Leçons</h4>
-                          <nav class="nav nav-pills flex-column">
-                            <a class="nav-link" href="#item-1">Cours d'agileté</a>
-                            <a class="nav-link" href="#item-2">Cours de socialisation</a>
-                            <nav class="nav nav-pills flex-column">
-                              <a class="nav-link ms-3 my-1" href="#item-2-1">Jeunes chiens</a>
-                              <a class="nav-link ms-3 my-1" href="#item-2-2">Grands chiens</a>
-                            </nav>
-                            <a class="nav-link" href="#item-3">Cours de comportement</a>
-                            <a class="nav-link" href="#item-4">Cours d'aquaforme</a>
+                          <nav class="row nav nav-pills">
+                            <li class="nav-item col-sm-3 col-md-12">
+                              <a class="nav-link" href="#item-1">Agileté</a>
+                            </li>
+                            <li class="nav-item dropdown col-sm-3 col-md-12 row">
+                              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#item-2" role="button" aria-expanded="false">Socialisation</a>
+                              <ul class="dropdown-menu col-sm-7">
+                                <li><a class="dropdown-item" href="#item-2-1">Jeunes chiens</a></li>
+                                <li><a class="dropdown-item" href="#item-2-2">Grands chiens</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                              </ul>
+                            </li>
+                            <li class="nav-item col-sm-3 col-md-12">
+                              <a class="nav-link" href="#item-3">Comportement</a>
+                            </li>
+                            <li class="nav-item col-sm-3 col-md-12">
+                              <a class="nav-link" href="#item-4">Aquaforme</a>
+                            </li>
                           </nav>
                         </nav>
                       </div>
-                      <div class="col-8">
+                      <div class="col-sm-12 col-md-8">
                         <div data-bs-spy="scroll" data-bs-target="#lecons-nav" data-bs-offset="0" tabindex="0" class="lecons-right-2">
                             <h2 id="item-1">Cours d'agileté</h2>
                             Les cours d'agileté sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Afin de pouvoir offrir un entrainement de qualité à tous, les classes sont limitées à 12 participants.
