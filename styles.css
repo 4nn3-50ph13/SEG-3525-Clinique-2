@@ -12,6 +12,10 @@
     background-color: var(--foreground-color);
 }
 
+h5 {
+    color: var(--text-color2);
+}
+
 html {
     --foreground-color: rgba(29, 29, 29, 0.27);
     --background-color: rgb(20, 20, 20);
@@ -19,6 +23,7 @@ html {
     --text-color2: rgb(221, 221, 221);
     --accent-color1:rgb(26, 95, 86);
     --accent-color2:rgb(47, 122, 112);
+    --accent-color3:rgb(180, 131, 39);
     /*--line-color: rgba(194, 196, 197, 0.35);
     --btn-color:#42424281;*/
 }
@@ -37,6 +42,17 @@ body {
 
 .header {
     background-color: var(--background-color);
+    position: relative;
+}
+
+.dogs {
+    position: absolute;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.logo {
+    opacity: 60%;
 }
 
 h1 {
@@ -50,14 +66,12 @@ h1 {
     background-color: var(--background-color);
 }
 
-.soins-vet {
+.dropdown-menu {
+    background-color: var(--accent-color3);
 }
 
-.adoption-refuge .adoption {
-}
-
-.horaire .table {
-    
+.dropdown-menu a{
+    color: var(--text-color2);
 }
 
 .table {
@@ -94,4 +108,12 @@ h1 {
 
 .nav-link:hover {
     color: var(--text-color1);
+}
+
+.nav-link:focus {
+    color: var(--text-color1);
+}
+
+.soc {
+    --bs-gutter-x: initial;
 }
