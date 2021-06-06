@@ -6,20 +6,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>DOGS!</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div class="container-fluid bg-dark text-white">
-            <div class="display-1 p-3">
-                <h1>DOGS!</h1>
+        <div class="container-fluid text-white " >
+            <div class="header">
+                <h1 class="display-1 p-3">DOGS!</h1>
             </div>
             <div class="row general-info p-3">
-                <div class="col-sm-12 col-md-4">777 Rue Élliot</div>
-                <div class="col-sm-12 col-md-4">(012) 345-6789</div>
-                <div class="col-sm-12 col-md-4">elliot.goodBoy@bestdog.com</div>
+                <div class="col-sm-12 col-md-4" ><i class="far fa-compass" style="font-size:20px;color:var(--accent-color2)"></i> 777 Rue Élliot</div>
+                <div class="col-sm-12 col-md-4"><i class="fa fa-phone" style="font-size:20px;color:var(--accent-color2)"></i> (012) 345-6789</div>
+                <div class="col-sm-12 col-md-4"><i class="far fa-envelope-open" style="font-size:20px;color:var(--accent-color2)"></i> elliot@goodBoy.com</div>
             </div>
             <div class="soins-vet p-3">
-                <h1>Soins Vétérinaires</h1>
+                <h1 class="display-4">Soins Vétérinaires</h1>
                 <h5>Contactez-nous pour prendre un rendez-vous en clinique, téléphonique ou chez-vous</h5>
                 <div class="row p-1">
                     <div class="col-sm-12 col-md-4">
@@ -41,34 +42,195 @@
                     </div>
                 </div>
             </div>
-            <div class="adoption-refuge">
-                <div class="adoption p-3 my-3">
-                    <h1>Adoptez un chien</h1>
+            <div class="adoption-refuge row">
+                <div class="adoption col-sm-12 col-md-6 p-3 my-3">
+                    <h1 class="display-4">Adoptez un chien</h1>
                     <h5>Rencontrez votre nouveau meilleur ami dès aujourd'hui</h5>
                 </div>
-                <div class="refuge p-3 my-3">
-                    <h1>Refuge <small>pour chiens</small></h1>
+                <div class="refuge col-sm-12 col-md-6 p-3 my-3">
+                    <h1 class="display-4">Refuge <small>pour chiens</small></h1>
                     <h5>Tous les chiens admits au refuge reçeveront des soins gratuits jusqu'à leur adoption</h5>
                 </div>
             </div>
-            <div class="cours">
-                <div class="row">
-                    <div class="agilete col-sm-12 col-md-6 p-3">
-                        <h2>Cours d'agileté</h2>
-                    </div>
-                    <div class="socialisation col-sm-12 col-md-6 p-3">
-                        <h2>Cours de socialisation</h2>
-                    </div>
-                    <div class="comportement col-sm-12 col-md-6 p-3">
-                        <h2>Cours de comportement</h2>
-                    </div>
-                    <div class="aquaforme col-sm-12 col-md-6 p-3">
-                        <h2>Cours d'aquaforme</h2>
+            <div class="cours p-3">
+                  
+                <div class="scrollspy-lecons">
+                    <div class="row">
+                      <div class="col-4">
+                        <nav id="lecons-nav" class="navbar navbar-light bg-dark flex-column align-items-stretch p-3">
+                          <h4 class="display-4">Leçons</h4>
+                          <nav class="nav nav-pills flex-column">
+                            <a class="nav-link" href="#item-1">Cours d'agileté</a>
+                            <a class="nav-link" href="#item-2">Cours de socialisation</a>
+                            <nav class="nav nav-pills flex-column">
+                              <a class="nav-link ms-3 my-1" href="#item-2-1">Jeunes chiens</a>
+                              <a class="nav-link ms-3 my-1" href="#item-2-2">Grands chiens</a>
+                            </nav>
+                            <a class="nav-link" href="#item-3">Cours de comportement</a>
+                            <a class="nav-link" href="#item-4">Cours d'aquaforme</a>
+                          </nav>
+                        </nav>
+                      </div>
+                      <div class="col-8">
+                        <div data-bs-spy="scroll" data-bs-target="#lecons-nav" data-bs-offset="0" tabindex="0" class="lecons-right-2">
+                            <h2 id="item-1">Cours d'agileté</h2>
+                            Les cours d'agileté sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés">*</a>. Afin de pouvoir offrir un entrainement de qualité à tous, les classes sont limitées à 12 participants.
+                            <div class="row p-1">
+                                <div class="p-3">
+                                    <table class="table table-hover">
+                                        <thead>
+                                          <tr>
+                                            <th>Niveau du chien</th>
+                                            <th>Horaire</th>
+                                            <th>Prix</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Premiers pas</td>
+                                            <td>Lundi 18h-19h30</td>
+                                            <td>220$ (4 sessions incluses)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Intermédiaire</td>
+                                            <td>Samedi 9h-11h</td>
+                                            <td>290$ (6 sessions incluses)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Compétitif</td>
+                                            <td>Samedi - 13h-16h</td>
+                                            <td>450$ (8 sessions incluses)</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                            <h2 id="item-2">Cours de socialisation</h2>
+                            Les cours de socialisation sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés">*</a>. Afin de pouvoir offrir un temps de qualité à tous, les classes sont limitées à 12 participants.
+                            <h2></h2>
+                            <h4 id="item-2-1">Jeunes chiens</h4>
+                            <div class="row p-1">
+                                <div class="p-3">
+                                    <table class="table table-hover">
+                                        <thead>
+                                          <tr>
+                                            <th>Type de classe</th>
+                                            <th>Horaire</th>
+                                            <th>Prix</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Jeu libre</td>
+                                            <td>Lundi 18h-19h30</td>
+                                            <td>220$ (4 sessions incluses)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Jeu dirigé</td>
+                                            <td>Samedi 9h-11h</td>
+                                            <td>290$ (6 sessions incluses)</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                            <h4 id="item-2-2">Grand chiens</h4>
+                            <div class="row p-1">
+                                <div class="p-3">
+                                    <table class="table table-hover">
+                                        <thead>
+                                          <tr>
+                                            <th>Type de classe</th>
+                                            <th>Horaire</th>
+                                            <th>Prix</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Jeu libre</td>
+                                            <td>Lundi 18h-19h30</td>
+                                            <td>220$ (4 sessions incluses)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Jeu dirigé</td>
+                                            <td>Samedi 9h-11h</td>
+                                            <td>290$ (6 sessions incluses)</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                            <h2 id="item-3">Cours de comportement</h2>
+                            Les cours de comportement sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés">*</a>. Afin de pouvoir offrir un entrainement de qualité à tous, les classes sont de tailles limitées. Les prix inclus une session d'évaluation de 15 minutes.
+                            <div class="row p-1">
+                                <div class="p-3">
+                                    <table class="table table-hover">
+                                        <thead>
+                                          <tr>
+                                            <th>Type de classe</th>
+                                            <th>Horaire</th>
+                                            <th>Prix</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>En groupe (5-10 chiens)</td>
+                                            <td>Samedi 11h-12h</td>
+                                            <td>220$ (4 sessions incluses)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Semi-privé (2-4 chiens)</td>
+                                            <td>Sur rendez-vous</td>
+                                            <td>290$ (6 sessions incluses)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Privé (1 chien)</td>
+                                            <td>Sur rendez-vous</td>
+                                            <td>450$ (8 sessions incluses)</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                            <h2 id="item-4">Cours d'aquaforme</h2>
+                            Les cours de comportement sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés.">*</a>. Afin de pouvoir offrir un entrainement de qualité à tous, les classes sont de tailles limitées.
+                            <div class="row p-1">
+                                <div class="p-3">
+                                    <table class="table table-hover">
+                                        <thead>
+                                          <tr>
+                                            <th>Type de classe</th>
+                                            <th>Horaire</th>
+                                            <th>Prix</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>En groupe (5-10 chiens)</td>
+                                            <td>Samedi 11h-12h</td>
+                                            <td>220$ (4 sessions incluses)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Semi-privé (2-4 chiens)</td>
+                                            <td>Sur rendez-vous</td>
+                                            <td>290$ (6 sessions incluses)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Privé (1 chien)</td>
+                                            <td>Sur rendez-vous</td>
+                                            <td>450$ (8 sessions incluses)</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
-            <div class="toilettage">
-                <h1>Toilettage <small>pour chiens</small></h1>
+            <div class="toilettage p-3">
+                <h1 class="display-4">Toilettage <small>pour chiens</small></h1>
                 <h5>Services disponnibles sur rendez-vous</h5>
                 <div class="row p-1">
                     <div class="col-sm-12 col-md-3">
@@ -93,7 +255,7 @@
                     </div>
                 </div>
             </div>
-            <div class="vente">
+            <div class="vente p-3">
                 <div class="nourriture">
 
                 </div>
@@ -101,7 +263,10 @@
 
                 </div>
             </div>
-            <div class="horaire">
+            <div class="reviews">
+
+            </div>
+            <div class="horaire p-3">
 
             </div>
         </div>
@@ -110,5 +275,11 @@
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+        
+    <script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+        });
+    </script>
     </body>
 </html>

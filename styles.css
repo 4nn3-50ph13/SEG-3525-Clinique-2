@@ -1,0 +1,96 @@
+
+::-webkit-scrollbar {
+    background-color: #111314;
+    color: var(--foreground-color);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #0b0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--foreground-color);
+}
+
+html {
+    --foreground-color: rgba(29, 29, 29, 0.27);
+    --background-color: rgb(20, 20, 20);
+    --text-color1: rgb(194, 196, 197);
+    --text-color2: rgb(221, 221, 221);
+    --accent-color1:rgb(26, 95, 86);
+    --accent-color2:rgb(47, 122, 112);
+    /*--line-color: rgba(194, 196, 197, 0.35);
+    --btn-color:#42424281;*/
+}
+
+body {
+    position: relative;
+    color: var(--text-color1);
+    background-color: var(--background-color);
+}
+
+.container-fluid {
+    color: var(--text-color1);
+    padding: 0px;
+    background-color: var(--foreground-color);
+}
+
+.header {
+    background-color: var(--background-color);
+}
+
+h1 {
+    color: var(--text-color2);
+    margin: 0;
+    letter-spacing: 4px;
+}
+
+.general-info {
+    letter-spacing: 3px;
+    background-color: var(--background-color);
+}
+
+.soins-vet {
+}
+
+.adoption-refuge .adoption {
+}
+
+.horaire .table {
+    
+}
+
+.table {
+    color: var(--text-color1);
+}
+
+.table-hover {
+    --bs-table-hover-color: var(--text-color2);
+}
+
+.scrollspy-left {
+    background-color: var(--foreground-color);
+}
+
+.scrollspy-lecons {
+    
+    background-color: rgba(29, 29, 29, 0.5);
+}
+
+.lecons-right-2 {
+    position: relative;
+    height: 350px;
+    overflow: auto;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: var(--accent-color1);
+}
+
+.nav-link {
+    color: var(--accent-color2);
+}
+
+.nav-link:hover {
+    color: var(--text-color1);
+}
