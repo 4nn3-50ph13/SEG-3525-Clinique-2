@@ -81,6 +81,7 @@ h1 {
     position: relative;
     height: 350px;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
