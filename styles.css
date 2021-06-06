@@ -46,6 +46,7 @@ body {
 }
 
 .dogs {
+    text-shadow: 0px 0px 10px #0000007e;
     position: absolute;
     font-weight: 700;
     margin-top: 10px;
