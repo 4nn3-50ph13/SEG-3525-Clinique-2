@@ -17,8 +17,9 @@ h5 {
 }
 
 html {
-    --foreground-color: rgba(29, 29, 29, 0.27);
-    --background-color: rgb(20, 20, 20);
+    --foreground-color: rgba(24, 24, 26, 0.404);
+    --background-color: rgb(14, 15, 17);
+    --background-color-light: #171a1d;
     --text-color1: rgb(194, 196, 197);
     --text-color2: rgb(221, 221, 221);
     --accent-color1:rgb(26, 95, 86);
@@ -118,3 +119,72 @@ h1 {
 .soc {
     --bs-gutter-x: initial;
 }
+
+.scrollspy-content {
+    padding-right: 0px;
+    background-color: var(--background-color-light);
+}
+
+.magasin {
+    padding-right: 0px!important;
+}
+
+.soins-vet {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 2fr 3fr 3fr 2fr;;
+}
+.soins-vet > div {
+  text-align: center;
+}
+.item1 { 
+    grid-area: 1 / span 3 / 2 / 4;
+    background-color: var(--foreground-color);
+    opacity: 100%;
+    padding-bottom: 15px;
+}
+.item2 { 
+    grid-area: 3 / 3 / 4 / 4;
+    background-color: var(--background-color-light); 
+ }
+.item3 { 
+    grid-area: 2 / 1 / 3 / 2;
+    
+    background-color: var(--foreground-color);
+    opacity: 100%;
+}
+.item4 { 
+    grid-area: 2 / 2 / span 2 / 3;
+    display: flex;
+    box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.15)
+}
+.item4 > div {
+    padding-top: 10px;
+    font-size: 1.5em;
+}
+.item4-1{
+    background-color: var(--accent-color3);
+    color: var(--background-color);
+}
+.item4-2{
+    background-color: var(--accent-color2);
+    color: var(text-color1);
+}
+.item4-3{
+    background-color: var(--bs-dark);
+    color: var(text-color1);
+}
+.item5 { 
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: var(--background-color-light); 
+}
+.item6 { 
+    grid-area: 2 / 3 / 3 / 4;
+    
+    background-color: var(--foreground-color);
+    opacity: 100%;
+ }
+ .item7 { 
+     grid-area: 4 / span 3 / 4 / 4;
+     background-color: var(--background-color-light);
+ }
