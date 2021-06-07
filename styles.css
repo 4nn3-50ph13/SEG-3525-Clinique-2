@@ -210,3 +210,50 @@ h1 {
     font-size: calc((1.475rem + 2.7vw)/3);
     font-weight: 300;
 }
+
+.form-check-input {
+    background-color: var(--background-color-light);
+    border: var(--text-color1);
+}
+
+.form-check-input:focus {
+    border-color: var(--text-color1);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--accent-color2);
+}
+
+.btn-primary {
+    color: var(--text-color1);
+    background-color: var(--accent-color1);
+    border-color: var(--accent-color1);
+}
+
+.btn-primary:hover {
+    color: var(--text-color1);
+    background-color: var(--accent-color2);
+    border-color: var(--accent-color2);
+}
+
+.btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
+    color: var(--text-color1);
+    background-color: var(--accent-color2);
+    border-color: var(--accent-color2);
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    color: var(--text-color1);
+    background-color: var(--accent-color2);
+    border-color: var(--accent-color2);
+    box-shadow: 0 0 0 0.25rem var(--accent-color2);
+}
+
+.btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.25rem var(--accent-color2);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--accent-color3);
+}
+.modal-footer {
+    border-top: 1px solid var(--accent-color3);
+}
