@@ -23,7 +23,7 @@
                 <div class="col-sm-12 col-md-4 d-flex justify-content-center"><i class="fa fa-phone" style="font-size:20px;color:var(--accent-color2)"></i> (012) 345-6789</div>
                 <div class="col-sm-12 col-md-4 d-flex justify-content-center"><i class="far fa-envelope-open" style="font-size:20px;color:var(--accent-color2)"></i> elliot@goodBoy.com</div>
             </div>
-            <div class="soins-vet  shadow mb-4">
+            <div class="soins-vet small-disp shadow mb-4">
               <div class="item1"><h1 class="display-4">Soins Vétérinaires</h1><h5>Contactez-nous pour prendre un rendez-vous en clinique, téléphonique ou chez-vous</h5></div>
               <div class="item2"></div>
               <div class="item3"></div>
@@ -31,22 +31,29 @@
               <div class="item6"></div>
               <div class="item7"></div>
               <div class="item4 row soc">
-                <div class="item4-1 col-sm-12 col-md-4">
-                  <dt>Soins d'urgence :</dt>
-                  <dd>- Premier-soins</dd>
-                  <dd>- Chirurgies</dd>
-                  <dd>- Autres</dd>
+                <div class="item4-1 col-sm-12 col-md-4 p-3">
+                  <dt>Soins d'urgence</dt>
+                  <dd>Premier-soins</dd>
+                  <dd>Chirurgies</dd>
+                  <dd>Autres</dd>
+                  <a type="button" class="btn btn-dark btn-lg shadow" href="#horaire">Horaire de la clinique</a>
                 </div>
-                <div class="item4-2 col-sm-12 col-md-4">
-                  <dt>Sur rendez-vous :</dt>
-                  <dd>- Check-up régulier</dd>
-                  <dd>- Chirurgies</dd>
-                  <dd>- Tests d'allergies</dd>
+                <div class="item4-2 col-sm-12 col-md-4 p-3">
+                  <dt>Sur rendez-vous</dt>
+                  <dd>Check-up régulier</dd>
+                  <dd>Chirurgies</dd>
+                  <dd>Tests d'allergies</dd>
+                  <button type="button" class="btn btn-dark btn-lg shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Rendez-vous
+                  </button>
                 </div>
-                <div class="item4-3 col-sm-12 col-md-4">
-                  <dt>Walk-in :</dt>    
-                  <dd>- Pesée</dd>
-                  <dd>- Consultations express</dd>
+                <div class="item4-3 col-sm-12 col-md-4 p-3">
+                  <dt>Walk-in</dt>    
+                  <dd>Pesée</dd>
+                  <dd>Consultations rapides</dd>
+                  <dd>Autres</dd>
+                  <dd> </dd>
+                  <a type="button" class="btn btn-secondary btn-lg shadow" href="#horaire">Horaire de la clinique</a>
                 </div>
               </div>
             </div>
@@ -507,6 +514,60 @@
                     <h5>Tous les chiens admits au refuge reçeveront des soins gratuits jusqu'à leur adoption</h5>
                 </div>
             </div>
+            <div class="horaire p-3 shadow mb-4" id="horaire">
+              
+              <div class="item1"><h1 class="display-4">Horaire de la clinique</h1><h5>Contactez-nous pour prendre un rendez-vous en clinique, téléphonique ou chez-vous</h5></div>
+              <div class="item2"></div>
+              <div class="item3"></div>
+              <div class="item5"></div>
+              <div class="item6"></div>
+              <div class="item7"></div>
+              <div class="item4 row soc">
+                <div class="item4-2 p-3 col-sm-12 col-md-4 small-disp">
+                  Les <span class="badge badge-dark">soins d'urgence</span> et les services walk-in sont offerts à <span class="badge badge-dark">tout temps</span> lors de now heures d'ouverture.
+                </div>
+                <div class="item4-3 col-sm-12 col-md-4">
+                  <table class="table table-borderless small-disp">
+                    <tbody>
+                      <tr>
+                        <td>LUNDI</td>
+                        <td>7h-20h</td>
+                      </tr>
+                      <tr>
+                        <td>MARDI</td>
+                        <td>7h-20h</td>
+                      </tr>
+                      <tr>
+                        <td>MERCREDI</td>
+                        <td>7h-20h</td>
+                      </tr>
+                      <tr>
+                        <td>JEUDI</td>
+                        <td>7h-20h</td>
+                      </tr>
+                      <tr>
+                        <td>VENDREDI</td>
+                        <td>7h-22h</td>
+                      </tr>
+                      <tr>
+                        <td>SAMEDI</td>
+                        <td>8h-22h</td>
+                      </tr>
+                      <tr>
+                        <td>DIMANCHE</td>
+                        <td>8h-20h</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="item4-1 p-3 col-sm-12 col-md-4 small-disp">
+                  <span class="badge badge-dark">Appelez-nous</span> au <span class="badge badge-dark">(012) 345-6789</span>pour prendre un rendez-vous ou cliquez :
+                  <button type="button" class="btn btn-dark btn-lg shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Rendez-vous
+                  </button>
+                </div>
+              </div>
+            </div>
             <div class="reviews shadow mb-4">
                 <div class="media row p-3 bg-dark">
                     <i class="fa fa-user-secret col-sm-12 col-md-2 d-flex justify-content-center align-items-center" style="font-size:60px;color:var(--accent-color2)"></i>
@@ -527,9 +588,6 @@
                 </div>
               </div>
             </div>
-            <div class="horaire p-3 shadow mb-4">
-
-            </div>
         </div>
 
 
@@ -543,4 +601,24 @@
         });
     </script>
     </body>
+
+
+    <!-- Modal -->
+    <div class="modal fade modal-fullscreen-sm-down" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h1 class="display-4">Rendez-vous</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Envoyer</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </html>

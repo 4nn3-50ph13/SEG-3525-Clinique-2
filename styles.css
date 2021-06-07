@@ -123,10 +123,19 @@ h1 {
 .scrollspy-content {
     padding-right: 0px;
     background-color: var(--background-color-light);
-}
+} 
 
 .magasin {
     padding-right: 0px!important;
+}
+
+.horaire {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 2fr 3fr 3fr 2fr;;
+}
+.horaire > div {
+  text-align: center;
 }
 
 .soins-vet {
@@ -159,20 +168,28 @@ h1 {
     box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.15)
 }
 .item4 > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
     padding-top: 10px;
     font-size: 1.5em;
 }
 .item4-1{
     background-color: var(--accent-color3);
-    color: var(--background-color);
+    color: var(--text-color2);
+    font-weight: 400!important;
 }
 .item4-2{
     background-color: var(--accent-color2);
-    color: var(text-color1);
+    color: var(--text-color1);
+}
+.item4-2 .badge {
+    font-size: 1em;
 }
 .item4-3{
     background-color: var(--bs-dark);
-    color: var(text-color1);
+    color: var(--text-color1);
 }
 .item5 { 
     grid-area: 3 / 1 / 4 / 2;
@@ -188,3 +205,8 @@ h1 {
      grid-area: 4 / span 3 / 4 / 4;
      background-color: var(--background-color-light);
  }
+
+.small-disp {
+    font-size: calc((1.475rem + 2.7vw)/3);
+    font-weight: 300;
+}
