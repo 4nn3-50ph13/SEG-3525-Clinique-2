@@ -36,7 +36,7 @@
                   <dd>Premier-soins</dd>
                   <dd>Chirurgies</dd>
                   <dd>Autres</dd>
-                  <a type="button" class="btn btn-dark btn-lg shadow" href="#horaire">Horaire de la clinique</a>
+                  <a type="button" class="btn btn-lg shadow" style="background-color:var(--button-important-color);color:var(--text-color2)" href="#horaire"><i class="fas fa-exclamation" style="font-size:20px;color:var(--accent-color3)"></i> Horaire de la clinique</a>
                 </div>
                 <div class="item4-2 col-sm-12 col-md-4 p-3">
                   <dt>Sur rendez-vous</dt>
@@ -52,13 +52,12 @@
                   <dd>Pesée</dd>
                   <dd>Consultations rapides</dd>
                   <dd>Autres</dd>
-                  <dd> </dd>
-                  <a type="button" class="btn btn-secondary btn-lg shadow" href="#horaire">Horaire de la clinique</a>
+                  <a type="button" class="btn btn-lg shadow"style="background-color:var(--button-important-color);color:var(--text-color2)"  href="#horaire"><i class="fas fa-exclamation" style="font-size:20px;color:var(--accent-color3)"></i> Horaire de la clinique</a>
                 </div>
               </div>
             </div>
             <div class="cours p-3">
-                <div class="scrollspy-lecons shadow mb-4">
+                <div class="scrollspy-lecons shadow">
                     <div class="row">
                       <div class="col-sm-12 col-md-4 bg-dark">
                         <nav id="lecons-nav" class="navbar flex-column align-items-stretch p-3">
@@ -241,8 +240,14 @@
                     </div>
                 </div>
             </div>
+            <div class="separator d-flex justify-content-center">
+              <span class="logo fa-stack fa-lg"style="font-size:calc((1.625rem + 4.5vw)/4)">
+                <i class="far fa-circle fa-stack-2x"style="color:var(--accent-color2)"></i>
+                <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
+              </span>
+            </div>
             <div class="toilettage p-3">
-                <div class="scrollspy-lecons shadow mb-4">
+                <div class="scrollspy-lecons shadow">
                     <div class="row">
                       <div class="col-sm-12 col-md-8 order-sm-2 order-md-1 scrollspy-content">
                         <div data-bs-spy="scroll" data-bs-target="#toilettage-nav" data-bs-offset="0" tabindex="0" class="lecons-right-2">
@@ -363,8 +368,14 @@
                     </div>
                 </div>
             </div>
+            <div class="separator d-flex justify-content-center">
+              <span class="logo fa-stack fa-lg"style="font-size:calc((1.625rem + 4.5vw)/4)">
+                <i class="far fa-circle fa-stack-2x"style="color:var(--accent-color2)"></i>
+                <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
+              </span>
+            </div>
             <div class="magasin p-3">
-                <div class="scrollspy-lecons shadow mb-4">
+                <div class="scrollspy-lecons shadow">
                     <div class="row">
                       <div class="col-sm-12 col-md-4 bg-dark">
                         <nav id="magasin-nav" class="navbar flex-column align-items-stretch p-3">
@@ -504,6 +515,12 @@
                     </div>
                 </div>
             </div>
+            <div class="separator d-flex justify-content-center">
+              <span class="logo fa-stack fa-lg"style="font-size:calc((1.625rem + 4.5vw)/4)">
+                <i class="far fa-circle fa-stack-2x"style="color:var(--accent-color2)"></i>
+                <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
+              </span>
+            </div>
             <div class="adoption-refuge row shadow mb-4">
                 <div class="adoption col-sm-12 col-md-6 p-3 my-3">
                     <h1 class="display-4">Adoptez un chien</h1>
@@ -606,7 +623,7 @@
     <!-- Modal -->
     <div class="modal fade modal-fullscreen-sm-down" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content bg-dark">
+        <div class="modal-content">
           <div class="modal-header">
             <h1 class="display-4">Rendez-vous</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -615,15 +632,15 @@
             <form action="/action_page.php">
               <div class="form-group form-control-lg">
                 <label for="email">Addresse courriel:</label>
-                <input type="email" class="form-control bg-dark" placeholder="Entrez votre addresse courriel" id="email" style="color:var(--text-color2)">
+                <input type="email" class="form-control" placeholder="Entrez votre addresse courriel" id="email" style="color:var(--text-color2)">
               </div>
               <div class="form-group form-control-lg">
                 <label for="email">Numéro de téléphone:</label>
-                <input type="email" class="form-control bg-dark" placeholder="Entrez votre numéro de téléphone" id="phone" style="color:var(--text-color2)">
+                <input type="email" class="form-control" placeholder="Entrez votre numéro de téléphone" id="phone" style="color:var(--text-color2)">
               </div>
               <div class="form-group form-control-lg">
                 <label for="comment">Expliquez votre demande :</label>
-                <textarea class="form-control bg-dark" rows="5" id="comment" style="color:var(--text-color2)"></textarea>
+                <textarea class="form-control" rows="5" id="comment" style="color:var(--text-color2)"></textarea>
               </div>
               <div class="form-group form-check">
                 <label class="form-check-label">
@@ -634,13 +651,13 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Envoyer</button>
+            <button class="btn btn-primary" data-bs-target="#modal-merci" data-bs-toggle="modal" data-bs-dismiss="modal">Envoyer</button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="modal fade modal-fullscreen-sm-down" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal fade modal-fullscreen-sm-down" id="modal-merci" aria-hidden="true" aria-labelledby="modal-merciLabel2" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content bg-dark">
           <div class="modal-header">
@@ -660,5 +677,4 @@
         </div>
       </div>
     </div>
-    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
 </html>

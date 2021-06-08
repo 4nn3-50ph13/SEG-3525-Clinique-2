@@ -25,6 +25,7 @@ html {
     --accent-color1:rgb(26, 95, 86);
     --accent-color2:rgb(47, 122, 112);
     --accent-color3:rgb(180, 131, 39);
+    --button-important-color: rgba(24, 24, 26);
     /*--line-color: rgba(194, 196, 197, 0.35);
     --btn-color:#42424281;*/
 }
@@ -251,9 +252,33 @@ h1 {
     box-shadow: 0 0 0 0.25rem var(--accent-color2);
 }
 
+.modal-content{
+    background-color: var(--background-color-light);
+}
 .modal-header {
     border-bottom: 1px solid var(--accent-color3);
 }
 .modal-footer {
     border-top: 1px solid var(--accent-color3);
+}
+.form-group input {
+    color: var(--text-color2);
+    background-color: var(--bs-dark);
+    border: none;
+}
+.form-group textarea {
+    color: var(--text-color2);
+    background-color: var(--bs-dark);
+    border: none;
+}
+.form-control:focus {
+    color: var(--text-color1);
+    background-color: var(--foreground-color);
+    border-color: var(--accent-color1);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--accent-color2);
+}
+
+.separator{
+    opacity: 50%;
 }
