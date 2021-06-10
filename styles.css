@@ -17,14 +17,14 @@ h5 {
 }
 
 html {
-    --foreground-color: rgba(24, 24, 26, 0.404);
+    --foreground-color: rgba(24, 24, 26, 0.666);
     --background-color: rgb(14, 15, 17);
     --background-color-light: #171a1d;
     --text-color1: rgb(194, 196, 197);
     --text-color2: rgb(221, 221, 221);
-    --accent-color1:rgb(26, 95, 86);
-    --accent-color2:rgb(47, 122, 112);
-    --accent-color3:rgb(180, 131, 39);
+    --accent-color1:rgb(26, 95, 80);
+    --accent-color2:rgb(55, 146, 126);
+    --accent-color3:rgb(151, 96, 33);
     --button-important-color: rgba(24, 24, 26);
     /*--line-color: rgba(194, 196, 197, 0.35);
     --btn-color:#42424281;*/
@@ -45,6 +45,7 @@ body {
 .header {
     background-color: var(--background-color);
     position: relative;
+    padding-bottom: 20px;
 }
 
 .dogs {
@@ -52,10 +53,19 @@ body {
     position: absolute;
     font-weight: 700;
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.clinique {
+    font-size: calc((1.475rem + 2.7vw)/3);
+    font-weight: 400;
+    margin-top: 5px;
 }
 
 .logo {
-    opacity: 60%;
+    opacity: 40%;
 }
 
 h1 {
@@ -182,8 +192,11 @@ h1 {
     font-weight: 400!important;
 }
 .item4-2{
-    background-color: var(--accent-color2);
+    background-color: var(--accent-color1);
     color: var(--text-color1);
+}
+.item4-1 .badge {
+    font-size: 1em;
 }
 .item4-2 .badge {
     font-size: 1em;
@@ -210,6 +223,10 @@ h1 {
 .small-disp {
     font-size: calc((1.475rem + 2.7vw)/3);
     font-weight: 300;
+}
+
+.btn {
+    margin: 10px;
 }
 
 .form-check-input {
@@ -266,6 +283,11 @@ h1 {
     background-color: var(--bs-dark);
     border: none;
 }
+.form-group option {
+    color: var(--text-color2);
+    background-color: var(--bs-dark);
+    border: none;
+}
 .form-group textarea {
     color: var(--text-color2);
     background-color: var(--bs-dark);
@@ -281,4 +303,16 @@ h1 {
 
 .separator{
     opacity: 50%;
+}
+
+.carousel-dark .carousel-caption {
+    background-color: var(--foreground-color);
+    color: var(--text-color1);
+    text-shadow: 0px 0px 20px #000000;
+}
+
+.carousel-caption p {
+    color: var(--text-color2);
+    font-size: 20px;
+    text-shadow: 0px 0px 20px #000000;
 }

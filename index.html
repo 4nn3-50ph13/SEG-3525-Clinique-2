@@ -16,12 +16,13 @@
                 <i class="far fa-circle fa-stack-2x"style="color:var(--accent-color2)"></i>
                 <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
               </span>
-              <h1 class="dogs display-1 p-3">DOGS!</h1>
+              <h1 class="dogs display-1 p-3">DOGS!<p1 class="clinique">Clinique Vétérinaire</p1></h1>
+              
             </div>
-            <div class="row general-info p-3 shadow mb-4">
-                <div class="col-sm-12 col-md-4 d-flex justify-content-center" ><i class="far fa-compass" style="font-size:20px;color:var(--accent-color2)"></i> 777 Rue Élliot</div>
-                <div class="col-sm-12 col-md-4 d-flex justify-content-center"><i class="fa fa-phone" style="font-size:20px;color:var(--accent-color2)"></i> (012) 345-6789</div>
-                <div class="col-sm-12 col-md-4 d-flex justify-content-center"><i class="far fa-envelope-open" style="font-size:20px;color:var(--accent-color2)"></i> elliot@goodBoy.com</div>
+            <div class="row general-info p-3 shadow mb-4 d-flex d-flex justify-content-around">
+                <div class="col-sm-12 col-md-4 d-flex justify-content-center" ><i class="far fa-compass" style="font-size:20px;color:var(--accent-color2)"></i><h1 class="small-disp"> 777 Rue Élliot</h1></div>
+                <div class="col-sm-12 col-md-3 d-flex justify-content-center"><i class="fa fa-phone" style="font-size:20px;color:var(--accent-color2)"></i class="display-1"><h1 class="small-disp"> (012) 345-6789</h1></div>
+                <div class="col-sm-12 col-md-4 d-flex justify-content-center"><i class="far fa-envelope-open" style="font-size:20px;color:var(--accent-color2)"></i class="display-1"><h1 class="small-disp"> elliot@goodBoy.com</h1></div>
             </div>
             <div class="soins-vet small-disp shadow mb-4">
               <div class="item1"><h1 class="display-4">Soins Vétérinaires</h1><h5>Contactez-nous pour prendre un rendez-vous en clinique, téléphonique ou chez-vous</h5></div>
@@ -521,14 +522,55 @@
                 <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
               </span>
             </div>
-            <div class="adoption-refuge row shadow mb-4">
+            <div class="nos-spécialistes row shadow mb-4">
                 <div class="adoption col-sm-12 col-md-6 p-3 my-3">
-                    <h1 class="display-4">Adoptez un chien</h1>
-                    <h5>Rencontrez votre nouveau meilleur ami dès aujourd'hui</h5>
+                    <h1 class="display-4">Nos spécialistes</h1>
                 </div>
-                <div class="refuge col-sm-12 col-md-6 p-3 my-3">
-                    <h1 class="display-4">Refuge <small>pour chiens</small></h1>
-                    <h5>Tous les chiens admits au refuge reçeveront des soins gratuits jusqu'à leur adoption</h5>
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                      <img src="images/expert-1.png" class="d-block w-100" alt="expert-1">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-4">Dr. Stephanie</h5>
+                        <p>Vétérinaire</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                      <img src="images/expert-2.png" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-4">Dr. Megan</h5>
+                        <p>Vétérinaire</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                      <img src="images/expert-3.png" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-4">Lola</h5>
+                        <p>Technicienne vétérinaire</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                      <img src="images/expert-4.png" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-4">Emma et Ella</h5>
+                        <p>Expertes en toilettage et soins de beauté pour chien</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
             </div>
             <div class="horaire p-3 shadow mb-4" id="horaire">
@@ -541,7 +583,10 @@
               <div class="item7"></div>
               <div class="item4 row soc">
                 <div class="item4-2 p-3 col-sm-12 col-md-4 small-disp">
-                  Les <span class="badge badge-dark">soins d'urgence</span> et les services walk-in sont offerts à <span class="badge badge-dark">tout temps</span> lors de now heures d'ouverture.
+                  <span class="badge badge-dark">Appelez-nous</span> au <span class="badge badge-dark">(012) 345-6789</span>pour prendre un rendez-vous ou cliquez :
+                  <button type="button" class="btn btn-dark btn-lg shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Rendez-vous
+                  </button>
                 </div>
                 <div class="item4-3 col-sm-12 col-md-4">
                   <table class="table table-borderless small-disp">
@@ -578,10 +623,7 @@
                   </table>
                 </div>
                 <div class="item4-1 p-3 col-sm-12 col-md-4 small-disp">
-                  <span class="badge badge-dark">Appelez-nous</span> au <span class="badge badge-dark">(012) 345-6789</span>pour prendre un rendez-vous ou cliquez :
-                  <button type="button" class="btn btn-dark btn-lg shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Rendez-vous
-                  </button>
+                  Les <span class="badge badge-dark">soins d'urgence</span> et les services walk-in sont offerts à <span class="badge badge-dark">tout temps</span> lors de now heures d'ouverture.
                 </div>
               </div>
             </div>
@@ -637,6 +679,14 @@
               <div class="form-group form-control-lg">
                 <label for="email">Numéro de téléphone:</label>
                 <input type="email" class="form-control" placeholder="Entrez votre numéro de téléphone" id="phone" style="color:var(--text-color2)">
+              </div>
+              <div class="form-group form-control-lg">
+                <select name="service" class="custom-select form-control">
+                  <option selected>Type de rendez-vous</option>
+                  <option value="Check-up">Check-up</option>
+                  <option value="Chirurgies">Chirurgies</option>
+                  <option value="Test d'allergies">Test d'allergies</option>
+                </select>
               </div>
               <div class="form-group form-control-lg">
                 <label for="comment">Expliquez votre demande :</label>
