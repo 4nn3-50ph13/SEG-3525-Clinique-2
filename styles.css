@@ -294,14 +294,29 @@ h1 {
     background-color: var(--bs-dark);
     border: none;
 }
-.form-control:focus {
+.form-floating:focus {
     color: var(--text-color1);
-    background-color: var(--foreground-color);
+    background-color: var(--bs-dark);
     border-color: var(--accent-color1);
     outline: 0;
     box-shadow: 0 0 0 0.25rem var(--accent-color2);
 }
-
+.form-control:focus {
+    color: var(--text-color1);
+    background-color: var(--bs-dark);
+    border-color: var(--accent-color1);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--accent-color2);
+}
+.form-floating .form-control {
+    color: var(--text-color1);
+    background-color: var(--bs-dark);
+    outline: 0;
+    border: none;
+}
+.commentaire>.form-control {
+    height: calc(7rem + 2px);
+}
 .separator{
     opacity: 50%;
     margin: 20px;
@@ -334,11 +349,9 @@ h1 {
 }
 .accordion-button::after {
     background-image: url("images/arrow-up.png");
-    transform: rotate(90deg);
 }
 .accordion-button:not(.collapsed)::after {
     background-image: url("images/arrow-up.png");
-    transform: rotate(270deg);
 }
 .accordion-item {
     background-color: var(--bs-dark);
