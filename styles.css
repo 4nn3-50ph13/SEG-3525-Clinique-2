@@ -23,7 +23,7 @@ html {
     --text-color1: rgb(194, 196, 197);
     --text-color2: rgb(221, 221, 221);
     --accent-color1:rgb(26, 95, 80);
-    --accent-color2:rgb(55, 146, 126);
+    --accent-color2:rgb(50, 129, 105);
     --accent-color3:rgb(151, 96, 33);
     --button-important-color: rgba(24, 24, 26);
     /*--line-color: rgba(194, 196, 197, 0.35);
@@ -317,6 +317,15 @@ h1 {
 .commentaire>.form-control {
     height: calc(7rem + 2px);
 }
+
+.progress {
+    height: 30px;
+    font-size: calc((1.475rem + 2.7vw)/3.5);
+    font-weight: 300;
+    border: 0.1em solid var(--accent-color1);
+}
+
+
 .separator{
     opacity: 50%;
     margin: 20px;
