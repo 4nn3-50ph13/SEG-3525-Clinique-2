@@ -144,7 +144,7 @@ h1 {
 .horaire {
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: 2fr 3fr 3fr 2fr;;
+    grid-template-rows: 2fr 3fr 3fr 2fr;
 }
 .horaire > div {
   text-align: center;
@@ -153,7 +153,7 @@ h1 {
 .soins-vet {
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: 2fr 3fr 3fr 2fr;;
+    grid-template-rows: 2fr 3fr 3fr 2fr;
 }
 .soins-vet > div {
   text-align: center;
@@ -318,13 +318,65 @@ h1 {
     height: calc(7rem + 2px);
 }
 
+.modal-dialog {
+    max-width: 550px;
+    margin: 1.75rem auto;
+}
+
 .progress {
     height: 30px;
     font-size: calc((1.475rem + 2.7vw)/3.5);
     font-weight: 300;
     border: 0.1em solid var(--accent-color1);
 }
+.diy-datepicker {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.calendar {
+    background-color: var(--accent-color1);
+    border-radius: 5px;
+    padding: 5px;
+}
 
+.btn-group {
+    background-color: var(--bs-dark);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    border-radius: 0;
+}
+.btn-group label {
+    margin: 0px;
+}
+.btn-outline-primary {
+    color: var(--text-color1);
+    border-color: var(--bs-dark);
+}
+.btn-group>.btn {
+    border-radius: 0;
+}
+.btn-check:active+.btn-outline-primary, .btn-check:checked+.btn-outline-primary, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show, .btn-outline-primary:active {
+    color: var(--text-color1);
+    border-color: var(--accent-color1);
+    background-color: var(--accent-color3);
+}
+.btn-check:active+.btn-outline-primary:focus, .btn-check:checked+.btn-outline-primary:focus, .btn-outline-primary.active:focus, .btn-outline-primary.dropdown-toggle.show:focus, .btn-outline-primary:active:focus {
+    box-shadow: 0 0 0 0.25rem var(--accent-color1);
+}
+.btn-outline-primary:hover {
+    color: var(--text-color1);
+    border-color: var(--accent-color1);
+    background-color: var(--accent-color2);
+}
+.btn-check:focus+.btn-outline-primary, .btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.25rem var(--accent-color1);
+}
+
+.form-select {
+    color: var(--text-color2);
+    background-color: var(--bs-dark);
+    border: none;
+}
 
 .separator{
     opacity: 50%;
