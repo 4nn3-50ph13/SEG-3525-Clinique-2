@@ -1,15 +1,15 @@
 
 ::-webkit-scrollbar {
     background-color: #111314;
-    color: var(--foreground-color);
+    color: var(--button-important-color);
 }
 
 ::-webkit-scrollbar-corner {
-    background-color: #0b0d0d;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--foreground-color);
+    background-color: var(--background-color-light);
 }
 
 h5 {
@@ -319,7 +319,7 @@ h1 {
 }
 
 .modal-dialog {
-    max-width: 550px;
+    max-width: 600px;
     margin: 1.75rem auto;
 }
 
@@ -329,30 +329,41 @@ h1 {
     font-weight: 300;
     border: 0.1em solid var(--accent-color1);
 }
-.diy-datepicker {
-    margin-left: 10px;
-    margin-right: 10px;
-}
+
 .calendar {
     background-color: var(--accent-color1);
     border-radius: 5px;
     padding: 5px;
+    margin: 10px;
 }
 
-.btn-group {
+.heure {
+    background-color: var(--accent-color1);
+}
+
+.btn-group-vertical {
+    width:100%;
+}
+
+.btn-group-vertical label{
+    background-color: var(--bs-dark);
+    margin: 0px;
+}
+
+.btn-group1 {
     background-color: var(--bs-dark);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     border-radius: 0;
 }
-.btn-group label {
+.btn-group1 label {
     margin: 0px;
 }
 .btn-outline-primary {
     color: var(--text-color1);
     border-color: var(--bs-dark);
 }
-.btn-group>.btn {
+.btn-group1>.btn {
     border-radius: 0;
 }
 .btn-check:active+.btn-outline-primary, .btn-check:checked+.btn-outline-primary, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show, .btn-outline-primary:active {
