@@ -123,6 +123,7 @@ h1 {
 
 .nav-link {
     color: var(--accent-color2);
+    font-size: calc((1.475rem + 2.7vw)/2);
 }
 
 .nav-link:hover {
@@ -228,6 +229,7 @@ h1 {
 
 .btn {
     margin: 10px;
+    font-size: calc((1.475rem + 1.5vw)/2);
 }
 
 .form-check-input {
