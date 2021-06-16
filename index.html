@@ -6,9 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>DOGS!</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+        <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
         <link rel="stylesheet" href="styles.css">
         <script src="script.js" defer></script>
+        <link href="custom/jquery-ui.css" rel="stylesheet">
     </head>
     <body>
         <div class="container-fluid text-white" >
@@ -668,57 +675,6 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
         
-        <script>
-        $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();   
-        });
-        $(function () {
-        var bindDatePicker = function() {
-          $(".date").datetimepicker({
-              format:'YYYY-MM-DD',
-            icons: {
-              time: "fa fa-clock-o",
-              date: "fa fa-calendar",
-              up: "fa fa-arrow-up",
-              down: "fa fa-arrow-down"
-            }
-          }).find('input:first').on("blur",function () {
-            // check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
-            // update the format if it's yyyy-mm-dd
-            var date = parseDate($(this).val());
-
-            if (! isValidDate(date)) {
-              //create date based on momentjs (we have that)
-              date = moment().format('YYYY-MM-DD');
-            }
-
-            $(this).val(date);
-          });
-        }
-        
-        var isValidDate = function(value, format) {
-          format = format || false;
-          // lets parse the date to the best of our knowledge
-          if (format) {
-            value = parseDate(value);
-          }
-
-          var timestamp = Date.parse(value);
-
-          return isNaN(timestamp) == false;
-        }
-        
-        var parseDate = function(value) {
-          var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
-          if (m)
-            value = m[5] + '-' + ("00" + m[3]).slice(-2) + '-' + ("00" + m[1]).slice(-2);
-
-          return value;
-        }
-        
-        bindDatePicker();
-      });
-        </script>
     </body>
 
 
@@ -742,28 +698,23 @@
             <form class="needs-validation" novalidate>
               <div class="row">
                 <div class="col-sm-12 col-md-6 form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInput" placeholder="Prénom" required>
-                  <label class="mx-2" for="floatingInput">Prénom</label>
+                  <input type="text" class="form-control" id="prenom" placeholder="Prénom" required>
+                  <label class="mx-2" for="floatingInput">prenom</label>
                   
-                  
-
                 </div>
                 <div class="col-sm-12 col-md-6 form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInput" placeholder="Nom" required>
-                  <label class="mx-2" for="floatingInput">Nom</label>
-                  
-                  
-                </div>
-                <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="Addresse courriel" required>
-                  <label class="mx-2" for="floatingInput">Addresse courriel</label>
-                  
+                  <input type="text" class="form-control" id="nom" placeholder="Nom" required>
+                  <label class="mx-2" for="nom">Nom</label>
                   
                 </div>
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="Numéro de téléphone" required>
-                  <label class="mx-2" for="floatingInput">Numéro de téléphone</label>
+                  <input type="email" class="form-control" id="email" placeholder="Addresse courriel" required>
+                  <label class="mx-2" for="email">Addresse courriel</label>
                   
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="phone" placeholder="Numéro de téléphone" required>
+                  <label class="mx-2" for="phone">Numéro de téléphone</label>
                   
                 </div>
                 <div class="form-group form-control-lg">
@@ -808,115 +759,14 @@
                 <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: var(--accent-color2);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Date et heure</div>
                 <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: rgb(18, 19, 21);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Terminer</div>
               </div>
+                
+              <h1 class="small-disp">Date :</h1>
 
-              <div class="diy-datepicker mb-3 row">
-                <div class="calendar col-sm-12 col-md-8 p-3 shadow2">
-                  <h1 class="small-disp text-center mb-3">Avril</h1>
-                  <div class="btn-group btn-group1" role="group">
-                    <input type="radio" class="btn-check" id="disabled" autocomplete="off" disabled>
-                    <label class="btn btn-outline-primary jour" for="disabled"><h1 class="small-disp text-center">Lun</h1></label>
-                    <input type="radio" class="btn-check" id="disabled" autocomplete="off" disabled>
-                    <label class="btn btn-outline-primary jour" for="disabled"><h1 class="small-disp text-center">Mar</h1></label>
-                    <input type="radio" class="btn-check" id="disabled" autocomplete="off" disabled>
-                    <label class="btn btn-outline-primary jour" for="disabled"><h1 class="small-disp text-center">Mer</h1></label>
-                    <input type="radio" class="btn-check" id="disabled" autocomplete="off" disabled>
-                    <label class="btn btn-outline-primary jour" for="disabled"><h1 class="small-disp text-center">Jeu</h1></label>
-                    <input type="radio" class="btn-check" id="disabled" autocomplete="off" disabled>
-                    <label class="btn btn-outline-primary jour" for="disabled"><h1 class="small-disp text-center">Ven</h1></label>
-                    <input type="radio" class="btn-check" id="disabled" autocomplete="off" disabled>
-                    <label class="btn btn-outline-primary jour" for="disabled"><h1 class="small-disp text-center">Sam</h1></label>
-                    <input type="radio" class="btn-check" id="disabled" autocomplete="off" disabled>
-                    <label class="btn btn-outline-primary jour" for="disabled"><h1 class="small-disp text-center">Dim</h1></label>
-                    <input type="radio" class="btn-check" name="btnradio" id="disabled" autocomplete="off" disabled>
-                    <label class="btn btn-outline-primary" for="disabled">30</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="disabled" autocomplete="off" disabled>
-                    <label class="btn btn-outline-primary" for="disabled">31</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="btnradio1">1</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio2">2</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio3">3</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio4">4</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio5">5</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio6">6</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio7">7</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="btnradio8">8</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio9">9</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio10">10</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio11" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio11">11</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio12" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio12">12</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio13" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio13">13</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio14" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio14">14</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio15" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="btnradio15">15</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio16" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio16">16</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio17" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio17">17</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio18" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio18">18</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio19" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio19">19</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio20" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio20">20</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio21" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio21">21</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio22" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="btnradio22">22</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio23" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio23">23</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio24" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio24">24</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio25" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio25">25</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio26" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio26">26</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio27" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio27">27</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio28" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio28">28</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio29" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio29">29</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio30" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio30">30</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="disabled" autocomplete="off" disabled>
-                    <label class="btn btn-outline-primary" for="disabled">1</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="disabled" autocomplete="off" disabled>
-                    <label class="btn btn-outline-primary" for="disabled">2</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="disabled" autocomplete="off" disabled>
-                    <label class="btn btn-outline-primary" for="disabled">3</label>
-                  </div>
-                </div>
-                <div class="calendar col-sm-12 col-md-3 p-3 shadow2">
-                  <h1 class="small-disp text-center mb-3">Heure</h1>
-                  <div class="btn-group-vertical" role="group">
-                    <input type="radio" class="btn-check" name="br" id="br1" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="br1">12h</label>
-                    <input type="radio" class="btn-check" name="br" id="br2" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="br2">13h</label>
-                    <input type="radio" class="btn-check" name="br" id="br3" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="br3">14h</label>
-                    <input type="radio" class="btn-check" name="br" id="br4" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="br4">17h</label>
-                    <input type="radio" class="btn-check" name="br" id="br5" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="br5">18h30</label>
-                    <input type="radio" class="btn-check" name="br" id="br6" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="br6">20h30</label>
-                  </div>
-                </div>
+              <div class="md-form row d-flex justify-content-center">
+                <input type="text" id="date-picker" class="form-control datepicker pic col-sm-12 col-md-6" placeholder="Date">
+                <input type="time" id="time-picker" class="form-control pic col-sm-12 col-md-6">
               </div>
+            
               <div class="modal-footer d-flex justify-content-between">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                 <div class="d-flex flex-row">

@@ -1,181 +1,182 @@
-
-let days_list = [
+let tovalidate = [
     {
-        name: 'x',
-        num: 'x'
+        tag: 'prenom',
+        value:'',
+        isentered: 0
     },
     {
-        name: 'x',
-        num: 'x'
+        tag: 'nom',
+        value:'',
+        isentered: 0
     },
     {
-        name: 'Mer',
-        num: '1'
+        tag: 'email',
+        value:'',
+        isentered: 0
     },
     {
-        name: 'Jeu',
-        num: '2'
+        tag: 'phone',
+        value:'',
+        isentered: 0
     },
     {
-        name: 'Ven',
-        num: '3'
-    },
-    {
-        name: 'Sam',
-        num: '4'
-    },
-    {
-        name: 'Dim',
-        num: '5'
-    },
-    {
-        name: 'Lun',
-        num: '6'
-    },
-    {
-        name: 'Mar',
-        num: '7'
-    },
-    {
-        name: 'Mer',
-        num: '8'
-    },
-    {
-        name: 'Jeu',
-        num: '9'
-    },
-    {
-        name: 'Ven',
-        num: '10'
-    },
-    {
-        name: 'Sam',
-        num: '11'
-    },
-    {
-        name: 'Dim',
-        num: '12'
-    },
-    {
-        name: 'Lun',
-        num: '13'
-    },
-    {
-        name: 'Mar',
-        num: '14'
-    },
-    {
-        name: 'Mer',
-        num: '15'
-    },
-    {
-        name: 'Jeu',
-        num: '16'
-    },
-    {
-        name: 'Ven',
-        num: '17'
-    },
-    {
-        name: 'Sam',
-        num: '18'
-    },
-    {
-        name: 'Dim',
-        num: '19'
-    },
-    {
-        name: 'Lun',
-        num: '20'
-    },
-    {
-        name: 'Mar',
-        num: '21'
-    },
-    {
-        name: 'Mer',
-        num: '22'
-    },
-    {
-        name: 'Jeu',
-        num: '23'
-    },
-    {
-        name: 'Ven',
-        num: '24'
-    },
-    {
-        name: 'Sam',
-        num: '25'
-    },
-    {
-        name: 'Dim',
-        num: '26'
-    },
-    {
-        name: 'Lun',
-        num: '27'
-    },
-    {
-        name: 'Mar',
-        num: '28'
-    },
-    {
-        name: 'Mer',
-        num: '29'
-    },
-    {
-        name: 'Jeu',
-        num: '30'
+        tag: 'service',
+        value:'',
+        isentered: 0
     }
-];
-
-let times = document.getElementsByName("br");
-console.log(times);
+]
+localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
 
 
-let times_list = [
-    {
-        name: '12h',
-        tag: '-1-2-4-5-'
-    },
-    {
-        name: '13h',
-        tag: '-1-2-6-7-'
-    },
-    {
-        name: '14h',
-        tag: '-1-2-4-6-'
-    },
-    {
-        name: '17h',
-        tag: '-3-4-5-7-'
-    },
-    {
-        name: '18h30',
-        tag: '-2-3-4-5-'
-    },
-    {
-        name: '20h30',
-        tag: '-1-2-7-6-'
-    }
-];
+// Function to verify that the phone number is correct.
+function validatePhone(txtPhone) {
+    var a = document.getElementById(txtPhone).value;
 
-let days = document.getElementsByName("btnradio");
-
-for (var i = 0; i < days.length; i++){
-    
-    days[i].addEventListener('click', () => {
-        var day = i%7+1;
-        
-        console.log(days_list[i]);
-
-        var day_of_week = days_list[day-1].name;
-        for(var j = 0; j < times.list; j++){
-            if(times_list[j].tag.includes("-"+day+"-")){
-                console.log(day_of_week+" - "+times_list[j].name);
-            }
-        }
-    })
-
+    var filter = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    return filter.test(a)
 }
+// Function to verify that the email is correct.
+function validateMail(email) {
+    var a = document.getElementById(email).value;
+
+    var filter = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    return filter.test(a)
+}
+// Function to verify that the name is correct.
+function validatePrenom(prenom) {
+    var a = document.getElementById(prenom).value;
+    return a.length > 0;
+}
+// Function to verify that the surname is correct.
+function validateNom(nom) {
+    var a = document.getElementById(nom).value;
+    return a.length > 0;
+}
+
+
+// Using date restrictions on datepicker
+// Document of datepicker is here: https://api.jqueryui.com/datepicker/
+// The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
+// Make sure in your version that you associate Days to remove with Experts (e.g. John doesn't work Mondays)
+// var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
+
+//                     steph    megan    lola   emma & ellavar 
+var availableDates = {
+  "Stephanie":[0,3,4,6],
+  "megan":[3,6],
+  "lola":[1,2,3,4,5],
+  "emma-ella":[0,1,2,6]
+};
+const setDateFormat = "dd/MM/yy";
+	
+
+function disableDates(date) {
+    // Sunday is Day 0, disable all Sundays
+    
+    // get chosen professionnal
+
+
+    if (date.getDay() === 0)
+        return [false];
+    var string = jQuery.datepicker.formatDate(setDateFormat, date);
+    return [ unavailableDates.indexOf(string) === -1 ]
+}
+
+
+// HERE, JQuery "LISTENING" starts
+$(document).ready(function(){
+
+    // phone validation, it calls validatePhone
+    // and also some feedback as an Alert + putting a value in the input that shows the format required
+    // the "addClass" will use the class "error" defined in style.css and add it to the phone input
+    // The "error" class in style.css defines yellow background and red foreground
+    $("#phone").on("change", function(){
+        if (!validatePhone("phone")){
+            alert("Attention! Le numéro de téléphone entré n'est pas du format xxx xxx xxxx");
+            $("#phone").val("xxx xxx xxxx");
+            tovalidate[3].isentered = 0;
+            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+        }
+        else {
+            tovalidate[3].isentered = 1;
+            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+        }
+    });
+    $("#email").on("change", function(){
+        if (!validateMail("email")){
+            alert("Attention! Le courriel entré n'est pas valide.");
+            $("#email").val("[xxx]@[xxx].[xxx]");
+            tovalidate[2].isentered = 0;
+            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+        }
+        else {
+            tovalidate[2].isentered = 1;
+            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+        }
+    });
+    $("#prenom").on("change", function(){
+        if (!validatePrenom("prenom")){
+            alert("Attention! Le courriel entré n'est pas valide.");
+            $("#prenom").val("");
+            tovalidate[0].isentered = 0;
+            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+        }
+        else {
+            tovalidate[0].isentered = 1;
+            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+        }
+    });
+    $("#nom").on("change", function(){
+        if (!validateNom("nom")){
+            alert("Attention! Le courriel entré n'est pas valide.");
+            $("#nom").val("");
+            tovalidate[1].isentered = 0;
+            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+        }
+        else {
+            tovalidate[1].isentered = 1;
+            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+        }
+    });
+
+    $( "#date-picker" ).datepicker(
+        {
+            dateFormat: setDateFormat,
+            maxDate: '+4M',
+            // used to disable some dates
+            beforeShowDay: $.datepicker.noWeekends,
+            beforeShowDay: disableDates
+        }
+    );
+
+
+    // Look at the different events on which an action can be performed
+    // https://www.w3schools.com/jquery/jquery_events.asp
+    // Here, we put
+    $("#debit").on("mouseenter", function(){
+        $("#debit").addClass("showInput"); // enlever??
+    });
+
+    $("#debit").on("mouseleave", function(){
+        $("#debit").removeClass("showInput");// enlever??
+    });
+
+    // https://jqueryui.com/tooltip/
+    // The class "highlight" used here is predefined in JQuery UI
+    // the message of the tooltip is encoded in the input (in the HTML file)
+    $("#debit").tooltip({
+        classes: {
+            "ui-tooltip": "highlight"// enlever??
+        }
+    });
+
+
+});
+
+
+
+
+
+
+
+

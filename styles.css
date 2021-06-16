@@ -20,11 +20,11 @@ html {
     --foreground-color: rgba(24, 24, 26, 0.666);
     --background-color: rgb(14, 15, 17);
     --background-color-light: #171a1d;
-    --text-color1: rgb(194, 196, 197);
-    --text-color2: rgb(221, 221, 221);
-    --accent-color1:rgb(26, 95, 80);
-    --accent-color2:rgb(50, 129, 105);
-    --accent-color3:rgb(151, 96, 33);
+    --text-color1: rgb(194, 196, 197); /*#c2c4c5*/
+    --text-color2: rgb(221, 221, 221); /*#dddddd*/
+    --accent-color1:rgb(26, 95, 80); /*#1a5f50*/
+    --accent-color2:rgb(50, 129, 105); /*#328169*/
+    --accent-color3:rgb(151, 96, 33); /*#976021*/
     --button-important-color: rgba(24, 24, 26);
     /*--line-color: rgba(194, 196, 197, 0.35);
     --btn-color:#42424281;*/
@@ -231,7 +231,11 @@ h1 {
     margin: 10px;
     font-size: calc((1.475rem + 1.5vw)/2);
 }
-
+.btn-primary.disabled, .btn-primary:disabled {
+    color: var(--text-color1);
+    background-color: var(--background-color);
+    border: none;
+}
 .form-check-input {
     background-color: var(--background-color-light);
     border: var(--text-color1);
@@ -454,4 +458,13 @@ h1 {
 
 .btn-close {
     background: none;
+}
+
+.pic {
+    font-size: calc((1.5rem + 2.5vw)/2);
+    color: var(--text-color1);
+    background-color: var(--bs-dark);
+    border: none;
+    margin: 10px;
+    width: 45%;
 }
