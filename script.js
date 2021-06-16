@@ -25,8 +25,26 @@ let tovalidate = [
         isentered: 0
     }
 ]
-localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+setServices();
 
+function setServices(){
+    let toV;
+    var a = 0;
+    for (let i=0; i < tovalidate.length; i++){
+        if (a == 0){
+            a=1;
+            toV = {
+                [tovalidate[i].tag]: tovalidate[i]
+            }
+        } else{
+            toV = {
+                ...toV,
+                [tovalidate[i].tag]: tovalidate[i]
+            }
+        }
+    }
+    localStorage.setItem('tovalidate', JSON.stringify(toV));
+}
 
 // Function to verify that the phone number is correct.
 function validatePhone(txtPhone) {
@@ -52,13 +70,18 @@ function validateNom(nom) {
     var a = document.getElementById(nom).value;
     return a.length > 0;
 }
+// Function to verify that the service is correct.
+function validateService(service) {
+    var a = document.getElementById(service).value;
+    return (a!="default");
+}
 
 
 // Using date restrictions on datepicker
 // Document of datepicker is here: https://api.jqueryui.com/datepicker/
 // The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
 // Make sure in your version that you associate Days to remove with Experts (e.g. John doesn't work Mondays)
-// var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
+// var availableDates = ["06/29/2020","07/07/2020","07/10/2020"];
 
 //                     steph    megan    lola   emma & ellavar 
 var availableDates = {
@@ -70,16 +93,12 @@ var availableDates = {
 const setDateFormat = "dd/MM/yy";
 	
 
-function disableDates(date) {
-    // Sunday is Day 0, disable all Sundays
-    
+function disableDates2(specialist) {
     // get chosen professionnal
+    var s = document.getElementById(specialist).value;
 
-
-    if (date.getDay() === 0)
-        return [false];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
+    return [ availableDates.indexOf(string) === -1 ]
 }
 
 
@@ -87,19 +106,19 @@ function disableDates(date) {
 $(document).ready(function(){
 
     // phone validation, it calls validatePhone
-    // and also some feedback as an Alert + putting a value in the input that shows the format required
-    // the "addClass" will use the class "error" defined in style.css and add it to the phone input
-    // The "error" class in style.css defines yellow background and red foreground
+
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
             alert("Attention! Le numéro de téléphone entré n'est pas du format xxx xxx xxxx");
             $("#phone").val("xxx xxx xxxx");
             tovalidate[3].isentered = 0;
-            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+            setServices();
+            toNext()
         }
         else {
             tovalidate[3].isentered = 1;
-            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+            setServices();
+            toNext()
         }
     });
     $("#email").on("change", function(){
@@ -107,11 +126,13 @@ $(document).ready(function(){
             alert("Attention! Le courriel entré n'est pas valide.");
             $("#email").val("[xxx]@[xxx].[xxx]");
             tovalidate[2].isentered = 0;
-            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+            setServices();
+            toNext()
         }
         else {
             tovalidate[2].isentered = 1;
-            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+            setServices();
+            toNext()
         }
     });
     $("#prenom").on("change", function(){
@@ -119,11 +140,13 @@ $(document).ready(function(){
             alert("Attention! Le courriel entré n'est pas valide.");
             $("#prenom").val("");
             tovalidate[0].isentered = 0;
-            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+            setServices();
+            toNext()
         }
         else {
             tovalidate[0].isentered = 1;
-            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+            setServices();
+            toNext()
         }
     });
     $("#nom").on("change", function(){
@@ -131,11 +154,25 @@ $(document).ready(function(){
             alert("Attention! Le courriel entré n'est pas valide.");
             $("#nom").val("");
             tovalidate[1].isentered = 0;
-            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+            setServices();
         }
         else {
             tovalidate[1].isentered = 1;
-            localStorage.setItem('tovalidate', JSON.stringify(tovalidate));
+            setServices();
+        }
+    });
+    $("#service").on("change", function(){
+        if (!validateService("service")){
+            alert("Attention! Vous n'avez pas choisi un service!");
+            $("#service").val("");
+            tovalidate[4].isentered = 0;
+            setServices();
+            toNext()
+        }
+        else {
+            tovalidate[4].isentered = 1;
+            setServices();
+            toNext()
         }
     });
 
@@ -144,11 +181,10 @@ $(document).ready(function(){
             dateFormat: setDateFormat,
             maxDate: '+4M',
             // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableDates
+            beforeShowDay: $.datepicker.noWeekends
         }
     );
-
+    $.datepicker.setDefaults( $.datepicker.regional[ "fr" ] );
 
     // Look at the different events on which an action can be performed
     // https://www.w3schools.com/jquery/jquery_events.asp
@@ -173,7 +209,21 @@ $(document).ready(function(){
 
 });
 
-
+function toNext(){
+    var next = true;
+    for (const item of tovalidate){
+        var v = localStorage.getItem('tovalidate');
+        v = JSON.parse(v);
+        if (v[item.tag].isentered == 0){
+            next = false;
+        }
+    }
+    if (next){
+        $("#toDate").prop("disabled",false);
+    }else {
+        $("#toDate").prop("disabled",true);
+    }
+}
 
 
 

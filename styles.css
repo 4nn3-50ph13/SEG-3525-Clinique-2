@@ -28,9 +28,11 @@ html {
     --button-important-color: rgba(24, 24, 26);
     /*--line-color: rgba(194, 196, 197, 0.35);
     --btn-color:#42424281;*/
+    background-color: var(--background-color-light);
 }
 
 body {
+    overflow: hidden;
     position: relative;
     color: var(--text-color1);
     background-color: var(--background-color);
@@ -97,6 +99,20 @@ h1 {
 
 .navbar {
     font-size: 1.3em;
+}
+
+.general-nav a {
+    font-size: calc((1.475rem + 2.3vw)/2);
+    text-align: center;
+}
+
+.nav-general {
+}
+
+.gen-nav {
+    padding: 0px;
+    height: 80%;
+    background-color: var(--background-color-light);
 }
 
 .scrollspy-lecons {
@@ -467,4 +483,11 @@ h1 {
     border: none;
     margin: 10px;
     width: 45%;
+}
+
+.scrollspy-general {
+    height: 585px;
+    position: relative;
+    overflow: auto;
+    overflow-x: hidden;
 }
