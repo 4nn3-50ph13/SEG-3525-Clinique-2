@@ -225,8 +225,15 @@ function toNext(){
     }
 }
 
+var height1 = $("header").height();
+var height2 = $("nav").height();
 
-
-
-
-
+$(window).scroll(function(){
+    if($(this).scrollTop() > height1){
+        $('.general-nav').addClass('fixed');
+        $(".general").css("top", height2);
+    }else {
+        $('.general-nav').removeClass('fixed');
+        $(".general").css("top", 0);
+    }
+});

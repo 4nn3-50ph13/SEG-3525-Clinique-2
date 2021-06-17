@@ -1,847 +1,848 @@
 <!DOCTYPE html>
-<html>
 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>DOGS!</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>DOGS!</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        
-        <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+      
+      <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
-        <link href="custom/jquery-ui.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container-fluid text-white" >
-            <div class="header d-flex justify-content-around">
-              <span class="logo fa-stack fa-lg"style="font-size:calc(1.625rem + 4.5vw)">
-                <i class="far fa-circle fa-stack-2x"style="color:var(--accent-color2)"></i>
-                <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
-              </span>
-              <h1 class="dogs display-1 p-3">DOGS!<p1 class="clinique">Clinique Vétérinaire</p1></h1>
-              
-            </div>
-            <div class="row general-info p-3 d-flex d-flex justify-content-around">
-                <div class="col-sm-12 col-md-4 d-flex justify-content-center" ><i class="far fa-compass" style="font-size:20px;color:var(--accent-color2)"></i><h1 class="small-disp"> 777 Rue Élliot</h1></div>
-                <div class="col-sm-12 col-md-3 d-flex justify-content-center"><i class="fa fa-phone" style="font-size:20px;color:var(--accent-color2)"></i class="display-1"><h1 class="small-disp"> (012) 345-6789</h1></div>
-                <div class="col-sm-12 col-md-4 d-flex justify-content-center"><i class="far fa-envelope-open" style="font-size:20px;color:var(--accent-color2)"></i class="display-1"><h1 class="small-disp"> elliot@goodBoy.com</h1></div>
-            </div>
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js" defer></script>
+      <link href="custom/jquery-ui.css" rel="stylesheet">
+  </head>
+  <body>
+      <div class="container-fluid text-white" >
 
-            <div class="row">
-              <div class="col-sm-12 nav-general shadow">
-                <nav id="lecons-nav" class="gen-nav navbar flex-column align-items-stretch">
-                  <nav class="row nav nav-pills general-nav">
-                    <li class="nav-item col-sm-3 soc">
-                      <a class="nav-link" href="#vet">Soins Vétérinaires</a>
-                    </li>
-                    <li class="nav-item col-sm-3 soc">
-                      <a class="nav-link" href="#services-accordion">Services variés</a>
-                    </li>
-                    <li class="nav-item col-sm-3 soc">
-                      <a class="nav-link" href="#specialistes">Spécialistes</a>
-                    </li>
-                    <li class="nav-item col-sm-3 soc">
-                      <a class="nav-link" href="#horaire">horaire</a>
-                    </li>
-                  </nav>
-                </nav>
+
+        <header id="header">
+          <div class="header d-flex justify-content-around">
+            <span class="logo fa-stack fa-lg"style="font-size:calc(1.625rem + 4.5vw)">
+              <i class="far fa-circle fa-stack-2x"style="color:var(--accent-color2)"></i>
+              <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
+            </span>
+            <h1 class="dogs display-1 p-3">DOGS!<p1 class="clinique">Clinique Vétérinaire</p1></h1>
+          </div>
+          <div class="row general-info p-3 d-flex justify-content-around">
+              <div class="col-sm-12 col-md-4 d-flex justify-content-center" ><i class="far fa-compass" style="font-size:20px;color:var(--accent-color2)"></i><h1 class="small-disp"> 777 Rue Élliot</h1></div>
+              <div class="col-sm-12 col-md-3 d-flex justify-content-center"><i class="fa fa-phone" style="font-size:20px;color:var(--accent-color2)"></i class="display-1"><h1 class="small-disp"> (012) 345-6789</h1></div>
+              <div class="col-sm-12 col-md-4 d-flex justify-content-center"><i class="far fa-envelope-open" style="font-size:20px;color:var(--accent-color2)"></i class="display-1"><h1 class="small-disp"> elliot@goodBoy.com</h1></div>
+          </div>
+        </header>
+        <nav class="nav general-nav">
+          <div class="row navbar-container nav-pills general-nav soc">
+            <li class="nav-item col-sm-3 soc">
+              <a class="nav-link" href="#vet">Soins Vétérinaires</a>
+            </li>
+            <li class="nav-item col-sm-3 soc">
+              <a class="nav-link" href="#services-accordion">Services variés</a>
+            </li>
+            <li class="nav-item col-sm-3 soc">
+              <a class="nav-link" href="#specialistes">Spécialistes</a>
+            </li>
+            <li class="nav-item col-sm-3 soc">
+              <a class="nav-link" href="#horaire">horaire</a>
+            </li>
+          </div>
+        </nav>
+        <div class="general">
+            
+          <div class="soins-vet small-disp shadow" id="vet">
+            <div class="item1"><h1 class="display-4">Soins Vétérinaires</h1><h5>Contactez-nous pour prendre un rendez-vous en clinique, téléphonique ou chez-vous</h5></div>
+            <div class="item2"></div>
+            <div class="item3"></div>
+            <div class="item5"></div>
+            <div class="item6"></div>
+            <div class="item7"></div>
+            <div class="item4 row soc">
+              <div class="item4-1 col-sm-12 col-md-4 p-3">
+                <dt>Soins d'urgence</dt>
+                <dd>Premier-soins</dd>
+                <dd>Chirurgies</dd>
+                <dd>Autres</dd>
+                <a type="button" class="btn btn-lg shadow2" style="background-color:var(--button-important-color);color:var(--text-color2)" href="#horaire"><i class="fas fa-business-time" style="font-size:20px;color:var(--accent-color3)"></i> Horaire</a>
               </div>
-              <div class="col-sm-12">
-                <div data-bs-spy="scroll" data-bs-target="#lecons-nav" data-bs-offset="0" tabindex="0" class="scrollspy-general">
-                    
-                  <div class="soins-vet small-disp shadow" id="vet">
-                    <div class="item1"><h1 class="display-4">Soins Vétérinaires</h1><h5>Contactez-nous pour prendre un rendez-vous en clinique, téléphonique ou chez-vous</h5></div>
-                    <div class="item2"></div>
-                    <div class="item3"></div>
-                    <div class="item5"></div>
-                    <div class="item6"></div>
-                    <div class="item7"></div>
-                    <div class="item4 row soc">
-                      <div class="item4-1 col-sm-12 col-md-4 p-3">
-                        <dt>Soins d'urgence</dt>
-                        <dd>Premier-soins</dd>
-                        <dd>Chirurgies</dd>
-                        <dd>Autres</dd>
-                        <a type="button" class="btn btn-lg shadow2" style="background-color:var(--button-important-color);color:var(--text-color2)" href="#horaire"><i class="fas fa-business-time" style="font-size:20px;color:var(--accent-color3)"></i> Horaire</a>
-                      </div>
-                      <div class="item4-2 col-sm-12 col-md-4 p-3">
-                        <dt>Sur rendez-vous</dt>
-                        <dd>Check-up régulier</dd>
-                        <dd>Chirurgies</dd>
-                        <dd>Tests d'allergies</dd>
-                        <button type="button" class="btn btn-dark btn-lg shadow2" data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="far fa-calendar-alt"></i>
-                          Rendez-vous
-                        </button>
-                      </div>
-                      <div class="item4-3 col-sm-12 col-md-4 p-3">
-                        <dt>Walk-in</dt>    
-                        <dd>Pesées</dd>
-                        <dd>Consultations</dd>
-                        <dd>Autres</dd>
-                        <a type="button" class="btn btn-lg shadow2"style="background-color:var(--button-important-color);color:var(--text-color2)"  href="#horaire"><i class="fas fa-business-time" style="font-size:20px;color:var(--accent-color3)"></i> Horaire</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="separator d-flex justify-content-center">
-                    <span class="logo fa-stack fa-lg"style="font-size:calc((1.625rem + 4.5vw)/4)">
-                      <i class="far fa-circle fa-stack-2x"style="color:var(--accent-color2)"></i>
-                      <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
-                    </span>
-                  </div>
-                  <div class="accordion accordion-flush shadow2" id="services-accordion">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed d-flex justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                          <h4 class="display-4">Leçons</h4>
-                        </button>
-                      </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#services-accordion">
-                        <div class="cours">
-                          <div class="scrollspy-lecons shadow">
-                              <div class="row bg-dark">
-                                <div class="col-sm-12 col-md-3 bg-dark">
-                                  <nav id="lecons-nav" class="navbar flex-column align-items-stretch p-3">
-                                    <nav class="row nav nav-pills d-flex justify-content-center">
-                                      <li class="nav-item col-sm-3 col-md-12 soc">
-                                        <a class="nav-link" href="#item-1">Agileté</a>
-                                      </li>
-                                      <li class="nav-item dropdown col-sm-3 col-md-12 row soc">
-                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#item-2" role="button" aria-expanded="false">Socialisation</a>
-                                        <ul class="dropdown-menu col-sm-7">
-                                          <li><a class="dropdown-item" href="#item-2-1">Jeunes chiens</a></li>
-                                          <li><a class="dropdown-item" href="#item-2-2">Grands chiens</a></li>
-                                        </ul>
-                                      </li>
-                                      <li class="nav-item col-sm-3 col-md-12 soc">
-                                        <a class="nav-link" href="#item-3">Comportement</a>
-                                      </li>
-                                      <li class="nav-item col-sm-3 col-md-12 soc">
-                                        <a class="nav-link" href="#item-4">Aquaforme</a>
-                                      </li>
-                                      <button type="button" class="btn btn-dark btn-lg col-12 shadow2" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: var(--accent-color1);"><i class="far fa-calendar-alt"></i>
-                                        Rendez-vous
-                                      </button>
-                                    </nav>
-                                  </nav>
-                                </div>
-                                <div class="col-sm-12 col-md-9 scrollspy-content">
-                                  <div data-bs-spy="scroll" data-bs-target="#lecons-nav" data-bs-offset="0" tabindex="0" class="lecons-right-2">
-                                      <h2 id="item-1">Cours d'agileté</h2>
-                                      Les cours d'agileté sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Afin de pouvoir offrir un entrainement de qualité à tous, les classes sont limitées à 12 participants.
-                                      <div class="row p-1">
-                                          <div class="p-3">
-                                              <table class="table table-hover">
-                                                  <thead>
-                                                    <tr>
-                                                      <th>Niveau du chien</th>
-                                                      <th>Horaire</th>
-                                                      <th>Prix</th>
-                                                    </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>Premiers pas</td>
-                                                      <td>Lundi 18h-19h30</td>
-                                                      <td>220$ (4 sessions incluses)</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Intermédiaire</td>
-                                                      <td>Samedi 9h-11h</td>
-                                                      <td>290$ (6 sessions incluses)</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Compétitif</td>
-                                                      <td>Samedi - 13h-16h</td>
-                                                      <td>450$ (8 sessions incluses)</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                          </div>
-                                      </div>
-                                      <h2 id="item-2">Cours de socialisation</h2>
-                                      Les cours de socialisation sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Afin de pouvoir offrir un temps de qualité à tous, les classes sont limitées à 12 participants.
-                                      <h2></h2>
-                                      <h4 id="item-2-1">Jeunes chiens</h4>
-                                      <div class="row p-1">
-                                          <div class="p-3">
-                                              <table class="table table-hover">
-                                                  <thead>
-                                                    <tr>
-                                                      <th>Type de classe</th>
-                                                      <th>Horaire</th>
-                                                      <th>Prix</th>
-                                                    </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>Jeu libre</td>
-                                                      <td>Lundi 18h-19h30</td>
-                                                      <td>220$ (4 sessions incluses)</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Jeu dirigé</td>
-                                                      <td>Samedi 9h-11h</td>
-                                                      <td>290$ (6 sessions incluses)</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                          </div>
-                                      </div>
-                                      <h4 id="item-2-2">Grand chiens</h4>
-                                      <div class="row p-1">
-                                          <div class="p-3">
-                                              <table class="table table-hover">
-                                                  <thead>
-                                                    <tr>
-                                                      <th>Type de classe</th>
-                                                      <th>Horaire</th>
-                                                      <th>Prix</th>
-                                                    </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>Jeu libre</td>
-                                                      <td>Lundi 18h-19h30</td>
-                                                      <td>220$ (4 sessions incluses)</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Jeu dirigé</td>
-                                                      <td>Samedi 9h-11h</td>
-                                                      <td>290$ (6 sessions incluses)</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                          </div>
-                                      </div>
-                                      <h2 id="item-3">Cours de comportement</h2>
-                                      Les cours de comportement sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Afin de pouvoir offrir un entrainement de qualité à tous, les classes sont de tailles limitées. Les prix inclus une session d'évaluation de 15 minutes.
-                                      <div class="row p-1">
-                                          <div class="p-3">
-                                              <table class="table table-hover">
-                                                  <thead>
-                                                    <tr>
-                                                      <th>Type de classe</th>
-                                                      <th>Horaire</th>
-                                                      <th>Prix</th>
-                                                    </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>En groupe (5-10 chiens)</td>
-                                                      <td>Samedi 11h-12h</td>
-                                                      <td>220$ (4 sessions incluses)</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Semi-privé (2-4 chiens)</td>
-                                                      <td>Sur rendez-vous</td>
-                                                      <td>290$ (6 sessions incluses)</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Privé (1 chien)</td>
-                                                      <td>Sur rendez-vous</td>
-                                                      <td>450$ (8 sessions incluses)</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                          </div>
-                                      </div>
-                                      <h2 id="item-4">Cours d'aquaforme</h2>
-                                      Les cours de comportement sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés."> * </a>. Afin de pouvoir offrir un entrainement de qualité à tous, les classes sont de tailles limitées.
-                                      <div class="row p-1">
-                                          <div class="p-3">
-                                              <table class="table table-hover">
-                                                  <thead>
-                                                    <tr>
-                                                      <th>Type de classe</th>
-                                                      <th>Horaire</th>
-                                                      <th>Prix</th>
-                                                    </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>En groupe (5-10 chiens)</td>
-                                                      <td>Samedi 11h-12h</td>
-                                                      <td>220$ (4 sessions incluses)</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Semi-privé (2-4 chiens)</td>
-                                                      <td>Sur rendez-vous</td>
-                                                      <td>290$ (6 sessions incluses)</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Privé (1 chien)</td>
-                                                      <td>Sur rendez-vous</td>
-                                                      <td>450$ (8 sessions incluses)</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                          </div>
-                                      </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+              <div class="item4-2 col-sm-12 col-md-4 p-3">
+                <dt>Sur rendez-vous</dt>
+                <dd>Check-up régulier</dd>
+                <dd>Chirurgies</dd>
+                <dd>Tests d'allergies</dd>
+                <button type="button" class="btn btn-dark btn-lg shadow2" data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="far fa-calendar-alt"></i>
+                  Rendez-vous
+                </button>
+              </div>
+              <div class="item4-3 col-sm-12 col-md-4 p-3">
+                <dt>Walk-in</dt>    
+                <dd>Pesées</dd>
+                <dd>Consultations</dd>
+                <dd>Autres</dd>
+                <a type="button" class="btn btn-lg shadow2"style="background-color:var(--button-important-color);color:var(--text-color2)"  href="#horaire"><i class="fas fa-business-time" style="font-size:20px;color:var(--accent-color3)"></i> Horaire</a>
+              </div>
+            </div>
+          </div>
+          <div class="separator d-flex justify-content-center">
+            <span class="logo fa-stack fa-lg"style="font-size:calc((1.625rem + 4.5vw)/4)">
+              <i class="far fa-circle fa-stack-2x"style="color:var(--accent-color2)"></i>
+              <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
+            </span>
+          </div>
+          <div class="accordion accordion-flush shadow2" id="services-accordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed d-flex justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <h4 class="display-4">Leçons</h4>
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#services-accordion">
+                <div class="cours">
+                  <div class="scrollspy-lecons shadow">
+                      <div class="row bg-dark">
+                        <div class="col-sm-12 col-md-3 bg-dark">
+                          <nav id="lecons-nav" class="navbar flex-column align-items-stretch p-3">
+                            <nav class="row nav nav-pills d-flex justify-content-center">
+                              <li class="nav-item col-sm-3 col-md-12 soc">
+                                <a class="nav-link" href="#item-1">Agileté</a>
+                              </li>
+                              <li class="nav-item dropdown col-sm-3 col-md-12 row soc">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#item-2" role="button" aria-expanded="false">Socialisation</a>
+                                <ul class="dropdown-menu col-sm-7">
+                                  <li><a class="dropdown-item" href="#item-2-1">Jeunes chiens</a></li>
+                                  <li><a class="dropdown-item" href="#item-2-2">Grands chiens</a></li>
+                                </ul>
+                              </li>
+                              <li class="nav-item col-sm-3 col-md-12 soc">
+                                <a class="nav-link" href="#item-3">Comportement</a>
+                              </li>
+                              <li class="nav-item col-sm-3 col-md-12 soc">
+                                <a class="nav-link" href="#item-4">Aquaforme</a>
+                              </li>
+                              <button type="button" class="btn btn-dark btn-lg col-12 shadow2" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: var(--accent-color1);"><i class="far fa-calendar-alt"></i>
+                                Rendez-vous
+                              </button>
+                            </nav>
+                          </nav>
                         </div>
-                      </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                          <h4 class="display-4">Toilettage</h4>
-                        </button>
-                      </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#services-accordion">
-                        <div class="toilettage">
-                          <div class="scrollspy-lecons shadow">
-                              <div class="row">
-                                <div class="col-sm-12 col-md-3 order-sm-1 order-md-1 bg-dark">
-                                  <nav id="toilettage-nav" class="navbar flex-column align-items-stretch p-3">
-                                    <nav class="row nav nav-pills d-flex justify-content-center">
-                                      <li class="nav-item col-sm-4 col-md-12 soc">
-                                        <a class="nav-link" href="#item-1b">Soins express</a>
-                                      </li>
-                                      <li class="nav-item col-sm-4 col-md-12 soc">
-                                        <a class="nav-link" href="#item-2b">Soins classiques</a>
-                                      </li>
-                                      <li class="nav-item col-sm-4 col-md-12 soc">
-                                        <a class="nav-link" href="#item-3b">Soins de luxe</a>
-                                      </li>
-                                      <button type="button" class="btn btn-dark btn-lg col-12 shadow2" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: var(--accent-color1);"><i class="far fa-calendar-alt"></i>
-                                        Rendez-vous
-                                      </button>
-                                    </nav>
-                                  </nav>
-                                </div>
-                                <div class="col-sm-12 col-md-9 order-sm-2 order-md-1 scrollspy-content">
-                                  <div data-bs-spy="scroll" data-bs-target="#toilettage-nav" data-bs-offset="0" tabindex="0" class="lecons-right-2">
-                                      <h2 id="item-1b">Soins express</h2>
-                                      Les Soins express sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Les soins express sont conçus afin de pouvoir donner des soins de qualité pour les chiens ayant un horraire occupé! Ce service inclu un bain, séchage commplet de la fourrure ainsi qu'un brossage.
-                                      <div class="row p-1">
-                                          <div class="p-3">
-                                              <table class="table table-hover">
-                                                  <thead>
-                                                    <tr>
-                                                      <th>Nombre de sessions</th>
-                                                      <th>Horaire</th>
-                                                      <th>Prix</th>
-                                                    </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>1</td>
-                                                      <td>Sur rendez-vous</td>
-                                                      <td>70$</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>3</td>
-                                                      <td>Sur rendez-vous</td>
-                                                      <td>160$ (3 sessions incluses)</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Abonnement mensuel</td>
-                                                      <td>Sur rendez-vous</td>
-                                                      <td>540$ (12 sessions incluses)</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                          </div>
-                                      </div>
-                                      <h2 id="item-2b">Soins classiques</h2>
-                                      Les Soins classiques sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Les Soins classiques sont pour les chiens qui veulent un service de haute qualité, mais tout de même affordable! Ce service inclu un bain, séchage commplet de la fourrure, un brossage ainsi qu'une coupe de la fourrure.
-                                      <div class="row p-1">
-                                        <div class="p-3">
-                                            <table class="table table-hover">
-                                                <thead>
-                                                  <tr>
-                                                    <th>Nombre de sessions</th>
-                                                    <th>Horaire</th>
-                                                    <th>Prix</th>
-                                                  </tr>
-                                                </thead>
-                                                <tbody>
-                                                  <tr>
-                                                    <td>1</td>
-                                                    <td>Sur rendez-vous</td>
-                                                    <td>80$</td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td>3</td>
-                                                    <td>Sur rendez-vous</td>
-                                                    <td>1750$ (3 sessions incluses)</td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td>Abonnement mensuel</td>
-                                                    <td>Sur rendez-vous</td>
-                                                    <td>600$ (12 sessions incluses)</td>
-                                                  </tr>
-                                                </tbody>
-                                              </table>
-                                        </div>
-                                      </div>
-                                      <h2 id="item-3b">Soins de luxe</h2>
-                                      Les cours de comportement sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés."> * </a>. Les Soins de luxe sont pour ceux qui aiment se gâter! Parfait pour les compétitions de beauté. Ce service inclu un bain avec produits de qualité suppérieure, séchage commplet de la fourrure, un brossage ainsi qu'une coupe de la fourrure de qualité de spectacle.
-                                      <div class="row p-1">
-                                        <div class="p-3">
-                                            <table class="table table-hover">
-                                                <thead>
-                                                  <tr>
-                                                    <th>Nombre de sessions</th>
-                                                    <th>Horaire</th>
-                                                    <th>Prix</th>
-                                                  </tr>
-                                                </thead>
-                                                <tbody>
-                                                  <tr>
-                                                    <td>1</td>
-                                                    <td>Sur rendez-vous</td>
-                                                    <td>100$</td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td>3</td>
-                                                    <td>Sur rendez-vous</td>
-                                                    <td>250$ (3 sessions incluses)</td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td>Abonnement mensuel</td>
-                                                    <td>Sur rendez-vous</td>
-                                                    <td>800$ (12 sessions incluses)</td>
-                                                  </tr>
-                                                </tbody>
-                                              </table>
-                                        </div>
-                                      </div>
+                        <div class="col-sm-12 col-md-9 scrollspy-content">
+                          <div data-bs-spy="scroll" data-bs-target="#lecons-nav" data-bs-offset="0" tabindex="0" class="lecons-right-2">
+                              <h2 id="item-1">Cours d'agileté</h2>
+                              Les cours d'agileté sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Afin de pouvoir offrir un entrainement de qualité à tous, les classes sont limitées à 12 participants.
+                              <div class="row p-1">
+                                  <div class="p-3">
+                                      <table class="table table-hover">
+                                          <thead>
+                                            <tr>
+                                              <th>Niveau du chien</th>
+                                              <th>Horaire</th>
+                                              <th>Prix</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>Premiers pas</td>
+                                              <td>Lundi 18h-19h30</td>
+                                              <td>220$ (4 sessions incluses)</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Intermédiaire</td>
+                                              <td>Samedi 9h-11h</td>
+                                              <td>290$ (6 sessions incluses)</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Compétitif</td>
+                                              <td>Samedi - 13h-16h</td>
+                                              <td>450$ (8 sessions incluses)</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
                                   </div>
-                                </div>
+                              </div>
+                              <h2 id="item-2">Cours de socialisation</h2>
+                              Les cours de socialisation sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Afin de pouvoir offrir un temps de qualité à tous, les classes sont limitées à 12 participants.
+                              <h2></h2>
+                              <h4 id="item-2-1">Jeunes chiens</h4>
+                              <div class="row p-1">
+                                  <div class="p-3">
+                                      <table class="table table-hover">
+                                          <thead>
+                                            <tr>
+                                              <th>Type de classe</th>
+                                              <th>Horaire</th>
+                                              <th>Prix</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>Jeu libre</td>
+                                              <td>Lundi 18h-19h30</td>
+                                              <td>220$ (4 sessions incluses)</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Jeu dirigé</td>
+                                              <td>Samedi 9h-11h</td>
+                                              <td>290$ (6 sessions incluses)</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                  </div>
+                              </div>
+                              <h4 id="item-2-2">Grand chiens</h4>
+                              <div class="row p-1">
+                                  <div class="p-3">
+                                      <table class="table table-hover">
+                                          <thead>
+                                            <tr>
+                                              <th>Type de classe</th>
+                                              <th>Horaire</th>
+                                              <th>Prix</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>Jeu libre</td>
+                                              <td>Lundi 18h-19h30</td>
+                                              <td>220$ (4 sessions incluses)</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Jeu dirigé</td>
+                                              <td>Samedi 9h-11h</td>
+                                              <td>290$ (6 sessions incluses)</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                  </div>
+                              </div>
+                              <h2 id="item-3">Cours de comportement</h2>
+                              Les cours de comportement sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Afin de pouvoir offrir un entrainement de qualité à tous, les classes sont de tailles limitées. Les prix inclus une session d'évaluation de 15 minutes.
+                              <div class="row p-1">
+                                  <div class="p-3">
+                                      <table class="table table-hover">
+                                          <thead>
+                                            <tr>
+                                              <th>Type de classe</th>
+                                              <th>Horaire</th>
+                                              <th>Prix</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>En groupe (5-10 chiens)</td>
+                                              <td>Samedi 11h-12h</td>
+                                              <td>220$ (4 sessions incluses)</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Semi-privé (2-4 chiens)</td>
+                                              <td>Sur rendez-vous</td>
+                                              <td>290$ (6 sessions incluses)</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Privé (1 chien)</td>
+                                              <td>Sur rendez-vous</td>
+                                              <td>450$ (8 sessions incluses)</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                  </div>
+                              </div>
+                              <h2 id="item-4">Cours d'aquaforme</h2>
+                              Les cours de comportement sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés."> * </a>. Afin de pouvoir offrir un entrainement de qualité à tous, les classes sont de tailles limitées.
+                              <div class="row p-1">
+                                  <div class="p-3">
+                                      <table class="table table-hover">
+                                          <thead>
+                                            <tr>
+                                              <th>Type de classe</th>
+                                              <th>Horaire</th>
+                                              <th>Prix</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>En groupe (5-10 chiens)</td>
+                                              <td>Samedi 11h-12h</td>
+                                              <td>220$ (4 sessions incluses)</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Semi-privé (2-4 chiens)</td>
+                                              <td>Sur rendez-vous</td>
+                                              <td>290$ (6 sessions incluses)</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Privé (1 chien)</td>
+                                              <td>Sur rendez-vous</td>
+                                              <td>450$ (8 sessions incluses)</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                  </div>
                               </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                          <h4 class="display-4">Achetez</h4>
-                        </button>
-                      </h2>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#services-accordion">
-                        
-                      <div class="magasin p-3">
-                        <div class="scrollspy-lecons shadow">
-                            <div class="row">
-                              <div class="col-sm-12 col-md-3 bg-dark">
-                                <nav id="magasin-nav" class="navbar flex-column align-items-stretch p-3">
-                                  <nav class="row nav nav-pills d-flex justify-content-center">
-                                    <li class="nav-item dropdown col-sm-6 col-md-12 row">
-                                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#item-1c" role="button" aria-expanded="false">nourriture</a>
-                                      <ul class="dropdown-menu col-sm-7">
-                                        <li><a class="dropdown-item" href="#item-1-1c">Jeunes chiens</a></li>
-                                        <li><a class="dropdown-item" href="#item-1-2c">Grands chiens</a></li>
-                                      </ul>
-                                    </li>
-                                    <li class="nav-item dropdown col-sm-6 col-md-12 row">
-                                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#item-2c" role="button" aria-expanded="false">accessoires</a>
-                                      <ul class="dropdown-menu col-sm-7">
-                                        <li><a class="dropdown-item" href="#item-2-1c">Jeunes chiens</a></li>
-                                        <li><a class="dropdown-item" href="#item-2-2c">Grands chiens</a></li>
-                                      </ul>
-                                    </li>
-                                  </nav>
-                                </nav>
-                              </div>
-                              <div class="col-sm-12 col-md-9 scrollspy-content">
-                                <div data-bs-spy="scroll" data-bs-target="#magasin-nav" data-bs-offset="0" tabindex="0" class="lecons-right-2">
-                                  <h2 id="item-1c">Nourriture</h2>
-                                  Les cours de socialisation sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Afin de pouvoir offrir un temps de qualité à tous, les classes sont limitées à 12 participants.
-                                  <h2></h2>
-                                  <h4 id="item-1-1c">Jeunes chiens</h4>
-                                  <div class="row p-1">
-                                      <div class="p-3">
-                                          <table class="table table-hover">
-                                              <thead>
-                                                <tr>
-                                                  <th>Type de classe</th>
-                                                  <th>Horaire</th>
-                                                  <th>Prix</th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                <tr>
-                                                  <td>Jeu libre</td>
-                                                  <td>Lundi 18h-19h30</td>
-                                                  <td>220$ (4 sessions incluses)</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Jeu dirigé</td>
-                                                  <td>Samedi 9h-11h</td>
-                                                  <td>290$ (6 sessions incluses)</td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                      </div>
-                                  </div>
-                                  <h4 id="item-1-2c">Grand chiens</h4>
-                                  <div class="row p-1">
-                                      <div class="p-3">
-                                          <table class="table table-hover">
-                                              <thead>
-                                                <tr>
-                                                  <th>Type de classe</th>
-                                                  <th>Horaire</th>
-                                                  <th>Prix</th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                <tr>
-                                                  <td>Jeu libre</td>
-                                                  <td>Lundi 18h-19h30</td>
-                                                  <td>220$ (4 sessions incluses)</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Jeu dirigé</td>
-                                                  <td>Samedi 9h-11h</td>
-                                                  <td>290$ (6 sessions incluses)</td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                      </div>
-                                  </div>
-                                  <h2 id="item-2c">Accessoires</h2>
-                                  Les cours de socialisation sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Afin de pouvoir offrir un temps de qualité à tous, les classes sont limitées à 12 participants.
-                                  <h2></h2>
-                                  <h4 id="item-2-1c">Jeunes chiens</h4>
-                                  <div class="row p-1">
-                                      <div class="p-3">
-                                          <table class="table table-hover">
-                                              <thead>
-                                                <tr>
-                                                  <th>Type de classe</th>
-                                                  <th>Horaire</th>
-                                                  <th>Prix</th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                <tr>
-                                                  <td>Jeu libre</td>
-                                                  <td>Lundi 18h-19h30</td>
-                                                  <td>220$ (4 sessions incluses)</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Jeu dirigé</td>
-                                                  <td>Samedi 9h-11h</td>
-                                                  <td>290$ (6 sessions incluses)</td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                      </div>
-                                  </div>
-                                  <h4 id="item-2-2c">Grand chiens</h4>
-                                  <div class="row p-1">
-                                      <div class="p-3">
-                                          <table class="table table-hover">
-                                              <thead>
-                                                <tr>
-                                                  <th>Type de classe</th>
-                                                  <th>Horaire</th>
-                                                  <th>Prix</th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                <tr>
-                                                  <td>Jeu libre</td>
-                                                  <td>Lundi 18h-19h30</td>
-                                                  <td>220$ (4 sessions incluses)</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Jeu dirigé</td>
-                                                  <td>Samedi 9h-11h</td>
-                                                  <td>290$ (6 sessions incluses)</td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                      </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="separator d-flex justify-content-center">
-                    <span class="logo fa-stack fa-lg"style="font-size:calc((1.625rem + 4.5vw)/4)">
-                      <i class="far fa-circle fa-stack-2x"style="color:var(--accent-color2)"></i>
-                      <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
-                    </span>
-                  </div>
-                  <div class="nos-specialistes row shadow2" id="specialistes">
-                      <div class="specialistes col-sm-12 col-md-6 p-3 my-3">
-                          <h1 class="display-4">Nos spécialistes</h1>
-                      </div>
-                      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active" data-bs-interval="5000">
-                            <img src="images/expert-1.png" class="d-block w-100" alt="expert-1">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5 class="display-4">Dr. Stephanie</h5>
-                              <p>Vétérinaire</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item" data-bs-interval="5000">
-                            <img src="images/expert-2.png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5 class="display-4">Dr. Megan</h5>
-                              <p>Vétérinaire</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item" data-bs-interval="5000">
-                            <img src="images/expert-3.png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5 class="display-4">Lola</h5>
-                              <p>Technicienne vétérinaire</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item" data-bs-interval="5000">
-                            <img src="images/expert-4.png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5 class="display-4">Emma et Ella</h5>
-                              <p>Expertes en toilettage et soins de beauté pour chien</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                  </div>
-                  <div class="separator d-flex justify-content-center">
-                    <span class="logo fa-stack fa-lg"style="font-size:calc((1.625rem + 4.5vw)/4)">
-                      <i class="far fa-circle fa-stack-2x"style="color:var(--accent-color2)"></i>
-                      <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
-                    </span>
-                  </div>
-                  <div class="horaire p-3 shadow2 mb-4" id="horaire">
-                    
-                    <div class="item1"><h1 class="display-4">Horaire de la clinique</h1><h5>Contactez-nous pour prendre un rendez-vous en clinique, téléphonique ou chez-vous</h5></div>
-                    <div class="item2"></div>
-                    <div class="item3"></div>
-                    <div class="item5"></div>
-                    <div class="item6"></div>
-                    <div class="item7"></div>
-                    <div class="item4 row soc">
-                      <div class="item4-2 p-3 col-sm-12 col-md-4 small-disp">
-                        <span class="badge badge-dark">Appelez-nous</span> au <span class="badge badge-dark">(012) 345-6789</span>pour prendre un rendez-vous ou cliquez :
-                        <button type="button" class="btn btn-dark btn-lg shadow2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          Rendez-vous
-                        </button>
-                      </div>
-                      <div class="item4-3 col-sm-12 col-md-4">
-                        <table class="table table-borderless small-disp">
-                          <tbody>
-                            <tr>
-                              <td>LUNDI</td>
-                              <td>7h-20h</td>
-                            </tr>
-                            <tr>
-                              <td>MARDI</td>
-                              <td>7h-20h</td>
-                            </tr>
-                            <tr>
-                              <td>MERCREDI</td>
-                              <td>7h-20h</td>
-                            </tr>
-                            <tr>
-                              <td>JEUDI</td>
-                              <td>7h-20h</td>
-                            </tr>
-                            <tr>
-                              <td>VENDREDI</td>
-                              <td>7h-22h</td>
-                            </tr>
-                            <tr>
-                              <td>SAMEDI</td>
-                              <td>8h-22h</td>
-                            </tr>
-                            <tr>
-                              <td>DIMANCHE</td>
-                              <td>8h-20h</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="item4-1 p-3 col-sm-12 col-md-4 small-disp">
-                        Les <span class="badge badge-dark">soins d'urgence</span> et les services walk-in sont offerts à <span class="badge badge-dark">tout temps</span> lors de now heures d'ouverture.
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <h4 class="display-4">Toilettage</h4>
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#services-accordion">
+                <div class="toilettage">
+                  <div class="scrollspy-lecons shadow">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-3 order-sm-1 order-md-1 bg-dark">
+                          <nav id="toilettage-nav" class="navbar flex-column align-items-stretch p-3">
+                            <nav class="row nav nav-pills d-flex justify-content-center">
+                              <li class="nav-item col-sm-4 col-md-12 soc">
+                                <a class="nav-link" href="#item-1b">Soins express</a>
+                              </li>
+                              <li class="nav-item col-sm-4 col-md-12 soc">
+                                <a class="nav-link" href="#item-2b">Soins classiques</a>
+                              </li>
+                              <li class="nav-item col-sm-4 col-md-12 soc">
+                                <a class="nav-link" href="#item-3b">Soins de luxe</a>
+                              </li>
+                              <button type="button" class="btn btn-dark btn-lg col-12 shadow2" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: var(--accent-color1);"><i class="far fa-calendar-alt"></i>
+                                Rendez-vous
+                              </button>
+                            </nav>
+                          </nav>
+                        </div>
+                        <div class="col-sm-12 col-md-9 order-sm-2 order-md-1 scrollspy-content">
+                          <div data-bs-spy="scroll" data-bs-target="#toilettage-nav" data-bs-offset="0" tabindex="0" class="lecons-right-2">
+                              <h2 id="item-1b">Soins express</h2>
+                              Les Soins express sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Les soins express sont conçus afin de pouvoir donner des soins de qualité pour les chiens ayant un horraire occupé! Ce service inclu un bain, séchage commplet de la fourrure ainsi qu'un brossage.
+                              <div class="row p-1">
+                                  <div class="p-3">
+                                      <table class="table table-hover">
+                                          <thead>
+                                            <tr>
+                                              <th>Nombre de sessions</th>
+                                              <th>Horaire</th>
+                                              <th>Prix</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>1</td>
+                                              <td>Sur rendez-vous</td>
+                                              <td>70$</td>
+                                            </tr>
+                                            <tr>
+                                              <td>3</td>
+                                              <td>Sur rendez-vous</td>
+                                              <td>160$ (3 sessions incluses)</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Abonnement mensuel</td>
+                                              <td>Sur rendez-vous</td>
+                                              <td>540$ (12 sessions incluses)</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                  </div>
+                              </div>
+                              <h2 id="item-2b">Soins classiques</h2>
+                              Les Soins classiques sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Les Soins classiques sont pour les chiens qui veulent un service de haute qualité, mais tout de même affordable! Ce service inclu un bain, séchage commplet de la fourrure, un brossage ainsi qu'une coupe de la fourrure.
+                              <div class="row p-1">
+                                <div class="p-3">
+                                    <table class="table table-hover">
+                                        <thead>
+                                          <tr>
+                                            <th>Nombre de sessions</th>
+                                            <th>Horaire</th>
+                                            <th>Prix</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Sur rendez-vous</td>
+                                            <td>80$</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Sur rendez-vous</td>
+                                            <td>1750$ (3 sessions incluses)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Abonnement mensuel</td>
+                                            <td>Sur rendez-vous</td>
+                                            <td>600$ (12 sessions incluses)</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                              </div>
+                              <h2 id="item-3b">Soins de luxe</h2>
+                              Les cours de comportement sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés."> * </a>. Les Soins de luxe sont pour ceux qui aiment se gâter! Parfait pour les compétitions de beauté. Ce service inclu un bain avec produits de qualité suppérieure, séchage commplet de la fourrure, un brossage ainsi qu'une coupe de la fourrure de qualité de spectacle.
+                              <div class="row p-1">
+                                <div class="p-3">
+                                    <table class="table table-hover">
+                                        <thead>
+                                          <tr>
+                                            <th>Nombre de sessions</th>
+                                            <th>Horaire</th>
+                                            <th>Prix</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Sur rendez-vous</td>
+                                            <td>100$</td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Sur rendez-vous</td>
+                                            <td>250$ (3 sessions incluses)</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Abonnement mensuel</td>
+                                            <td>Sur rendez-vous</td>
+                                            <td>800$ (12 sessions incluses)</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
             </div>
-
-
-
-
-
-
-
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <h4 class="display-4">Achetez</h4>
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#services-accordion">
+                
+              <div class="magasin p-3">
+                <div class="scrollspy-lecons shadow">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-3 bg-dark">
+                        <nav id="magasin-nav" class="navbar flex-column align-items-stretch p-3">
+                          <nav class="row nav nav-pills d-flex justify-content-center">
+                            <li class="nav-item dropdown col-sm-6 col-md-12 row">
+                              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#item-1c" role="button" aria-expanded="false">nourriture</a>
+                              <ul class="dropdown-menu col-sm-7">
+                                <li><a class="dropdown-item" href="#item-1-1c">Jeunes chiens</a></li>
+                                <li><a class="dropdown-item" href="#item-1-2c">Grands chiens</a></li>
+                              </ul>
+                            </li>
+                            <li class="nav-item dropdown col-sm-6 col-md-12 row">
+                              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#item-2c" role="button" aria-expanded="false">accessoires</a>
+                              <ul class="dropdown-menu col-sm-7">
+                                <li><a class="dropdown-item" href="#item-2-1c">Jeunes chiens</a></li>
+                                <li><a class="dropdown-item" href="#item-2-2c">Grands chiens</a></li>
+                              </ul>
+                            </li>
+                          </nav>
+                        </nav>
+                      </div>
+                      <div class="col-sm-12 col-md-9 scrollspy-content">
+                        <div data-bs-spy="scroll" data-bs-target="#magasin-nav" data-bs-offset="0" tabindex="0" class="lecons-right-2">
+                          <h2 id="item-1c">Nourriture</h2>
+                          Les cours de socialisation sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Afin de pouvoir offrir un temps de qualité à tous, les classes sont limitées à 12 participants.
+                          <h2></h2>
+                          <h4 id="item-1-1c">Jeunes chiens</h4>
+                          <div class="row p-1">
+                              <div class="p-3">
+                                  <table class="table table-hover">
+                                      <thead>
+                                        <tr>
+                                          <th>Type de classe</th>
+                                          <th>Horaire</th>
+                                          <th>Prix</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>Jeu libre</td>
+                                          <td>Lundi 18h-19h30</td>
+                                          <td>220$ (4 sessions incluses)</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Jeu dirigé</td>
+                                          <td>Samedi 9h-11h</td>
+                                          <td>290$ (6 sessions incluses)</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                              </div>
+                          </div>
+                          <h4 id="item-1-2c">Grand chiens</h4>
+                          <div class="row p-1">
+                              <div class="p-3">
+                                  <table class="table table-hover">
+                                      <thead>
+                                        <tr>
+                                          <th>Type de classe</th>
+                                          <th>Horaire</th>
+                                          <th>Prix</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>Jeu libre</td>
+                                          <td>Lundi 18h-19h30</td>
+                                          <td>220$ (4 sessions incluses)</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Jeu dirigé</td>
+                                          <td>Samedi 9h-11h</td>
+                                          <td>290$ (6 sessions incluses)</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                              </div>
+                          </div>
+                          <h2 id="item-2c">Accessoires</h2>
+                          Les cours de socialisation sont pour les chiens de tout âge<a data-toggle="tooltip" data-placement="top" title="Tous chiens doivent-être complètement vaccinés"> * </a>. Afin de pouvoir offrir un temps de qualité à tous, les classes sont limitées à 12 participants.
+                          <h2></h2>
+                          <h4 id="item-2-1c">Jeunes chiens</h4>
+                          <div class="row p-1">
+                              <div class="p-3">
+                                  <table class="table table-hover">
+                                      <thead>
+                                        <tr>
+                                          <th>Type de classe</th>
+                                          <th>Horaire</th>
+                                          <th>Prix</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>Jeu libre</td>
+                                          <td>Lundi 18h-19h30</td>
+                                          <td>220$ (4 sessions incluses)</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Jeu dirigé</td>
+                                          <td>Samedi 9h-11h</td>
+                                          <td>290$ (6 sessions incluses)</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                              </div>
+                          </div>
+                          <h4 id="item-2-2c">Grand chiens</h4>
+                          <div class="row p-1">
+                              <div class="p-3">
+                                  <table class="table table-hover">
+                                      <thead>
+                                        <tr>
+                                          <th>Type de classe</th>
+                                          <th>Horaire</th>
+                                          <th>Prix</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>Jeu libre</td>
+                                          <td>Lundi 18h-19h30</td>
+                                          <td>220$ (4 sessions incluses)</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Jeu dirigé</td>
+                                          <td>Samedi 9h-11h</td>
+                                          <td>290$ (6 sessions incluses)</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="separator d-flex justify-content-center">
+            <span class="logo fa-stack fa-lg"style="font-size:calc((1.625rem + 4.5vw)/4)">
+              <i class="far fa-circle fa-stack-2x"style="color:var(--accent-color2)"></i>
+              <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
+            </span>
+          </div>
+          <div class="nos-specialistes row shadow2" id="specialistes">
+              <div class="specialistes col-sm-12 col-md-6 p-3 my-3">
+                  <h1 class="display-4">Nos spécialistes</h1>
+              </div>
+              <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="images/expert-1.png" class="d-block w-100" alt="expert-1">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="display-4">Dr. Stephanie</h5>
+                      <p>Vétérinaire</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="images/expert-2.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="display-4">Dr. Megan</h5>
+                      <p>Vétérinaire</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="images/expert-3.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="display-4">Lola</h5>
+                      <p>Technicienne vétérinaire</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="images/expert-4.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="display-4">Emma et Ella</h5>
+                      <p>Expertes en toilettage et soins de beauté pour chien</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+          <div class="separator d-flex justify-content-center">
+            <span class="logo fa-stack fa-lg"style="font-size:calc((1.625rem + 4.5vw)/4)">
+              <i class="far fa-circle fa-stack-2x"style="color:var(--accent-color2)"></i>
+              <i class="fas fa-paw fa-stack-1x"style="color:var(--accent-color3)"></i>
+            </span>
+          </div>
+          <div class="horaire p-3 shadow2 mb-4" id="horaire">
+            
+            <div class="item1"><h1 class="display-4">Horaire de la clinique</h1><h5>Contactez-nous pour prendre un rendez-vous en clinique, téléphonique ou chez-vous</h5></div>
+            <div class="item2"></div>
+            <div class="item3"></div>
+            <div class="item5"></div>
+            <div class="item6"></div>
+            <div class="item7"></div>
+            <div class="item4 row soc">
+              <div class="item4-2 p-3 col-sm-12 col-md-4 small-disp">
+                <span class="badge badge-dark">Appelez-nous</span> au <span class="badge badge-dark">(012) 345-6789</span>pour prendre un rendez-vous ou cliquez :
+                <button type="button" class="btn btn-dark btn-lg shadow2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Rendez-vous
+                </button>
+              </div>
+              <div class="item4-3 col-sm-12 col-md-4">
+                <table class="table table-borderless small-disp">
+                  <tbody>
+                    <tr>
+                      <td>LUNDI</td>
+                      <td>7h-20h</td>
+                    </tr>
+                    <tr>
+                      <td>MARDI</td>
+                      <td>7h-20h</td>
+                    </tr>
+                    <tr>
+                      <td>MERCREDI</td>
+                      <td>7h-20h</td>
+                    </tr>
+                    <tr>
+                      <td>JEUDI</td>
+                      <td>7h-20h</td>
+                    </tr>
+                    <tr>
+                      <td>VENDREDI</td>
+                      <td>7h-22h</td>
+                    </tr>
+                    <tr>
+                      <td>SAMEDI</td>
+                      <td>8h-22h</td>
+                    </tr>
+                    <tr>
+                      <td>DIMANCHE</td>
+                      <td>8h-20h</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="item4-1 p-3 col-sm-12 col-md-4 small-disp">
+                Les <span class="badge badge-dark">soins d'urgence</span> et les services walk-in sont offerts à <span class="badge badge-dark">tout temps</span> lors de now heures d'ouverture.
+              </div>
+            </div>
+          </div>
         </div>
-
-
-
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
         
-    </body>
-
-
-    <!-- Modal -->
-    <div class="modal fade modal-fullscreen-sm-down" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div class="row">
-              <h1 class="display-4 col-12">Rendez-vous</h1>
-              <h1 class="small-disp col-12">Entrez vos informations</h1>
+          <div class="row">
+            <div class="col-sm-12 nav-general">
+              <nav id="lecons-nav" class="gen-nav flex-column align-items-stretch">
+                
+              </nav>
             </div>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times" style="color: var(--text-color1);"></i></button>
-          </div>
-          <div class="modal-body">
-            <div class="progress mb-3 shadow2" style="background-color: var(--background-color-light);">
-              <div class="progress-bar" role="progressbar" style="width: 33.34%;background-color: var(--accent-color1);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">1 - Vos informations</div>
-              <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: rgb(18, 19, 21);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">2 - Date et heure</div>
-              <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: var(--background-color);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">3 - Terminer</div>
+            <div class="col-sm-12">
+              <div data-bs-spy="scroll" data-bs-target="#lecons-nav" data-bs-offset="0" tabindex="0" class="scrollspy-general">
+                  
+              </div>
             </div>
-            <form class="needs-validation" novalidate>
-              <div class="row">
-                <div class="col-sm-12 col-md-6 form-floating mb-3">
-                  <input type="text" class="form-control" id="prenom" placeholder="Prénom" required>
-                  <label class="mx-2" for="floatingInput">prenom</label>
-                  
-                </div>
-                <div class="col-sm-12 col-md-6 form-floating mb-3">
-                  <input type="text" class="form-control" id="nom" placeholder="Nom" required>
-                  <label class="mx-2" for="nom">Nom</label>
-                  
-                </div>
-                <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="email" placeholder="Addresse courriel" required>
-                  <label class="mx-2" for="email">Addresse courriel</label>
-                  
-                </div>
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="phone" placeholder="Numéro de téléphone" required>
-                  <label class="mx-2" for="phone">Numéro de téléphone</label>
-                  
-                </div>
-                <div class="form-group form-control-lg">
-                    <select class="form-select form-select-lg" id="service">
-                      <option selected value="default">Choisissez un service</option>
-                      <option value="Check-up">Check-up</option>
-                      <option value="Chirurgies">Chirurgies</option>
-                      <option value="Test d'allergies">Test d'allergies</option>
-                      <option value="a">Leçons d'agileté</option>
-                      <option value="aa">Leçons de socialisation</option>
-                      <option value="aaa">Leçons de comportementé</option>
-                      <option value="aaaa">Leçons d'aquaforme</option>
-                    </select>
-                </div>
-                <div class="form-floating form-control-lg">
-                </div>
-            </form>
           </div>
-          <div class="modal-footer d-flex justify-content-between">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-            <button class="btn btn-primary" id="toDate" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal" disabled>Date et heure <i class="fas fa-chevron-right"></i></button>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
-    <!-- Modal -->
-    <div class="modal fade modal-fullscreen-sm-down" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div class="row">
-              <h1 class="display-4 col-12">Rendez-vous</h1>
-              <h1 class="small-disp col-12">Choisissez la date et l'heure</h1>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times" style="color: var(--text-color1);"></i></button>
+
+
+      
+
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+  </body>
+
+  <!-- Modal -->
+  <div class="modal fade modal-fullscreen-sm-down" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="row">
+            <h1 class="display-4 col-12">Rendez-vous</h1>
+            <h1 class="small-disp col-12">Entrez vos informations</h1>
           </div>
-          <div class="modal-body">
-            <form class="needs-validation" novalidate>
-              <div class="progress mb-3 shadow2" style="background-color: var(--background-color-light);">
-                <div class="progress-bar" role="progressbar" style="width: 33.34%;background-color: var(--accent-color1);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Vos informations</div>
-                <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: var(--accent-color2);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Date et heure</div>
-                <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: rgb(18, 19, 21);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Terminer</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times" style="color: var(--text-color1);"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="progress mb-3 shadow2" style="background-color: var(--background-color-light);">
+            <div class="progress-bar" role="progressbar" style="width: 33.34%;background-color: var(--accent-color1);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">1 - Vos informations</div>
+            <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: rgb(18, 19, 21);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">2 - Date et heure</div>
+            <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: var(--background-color);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">3 - Terminer</div>
+          </div>
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-sm-12 col-md-6 form-floating mb-3">
+                <input type="text" class="form-control" id="prenom" placeholder="Prénom" required>
+                <label class="mx-2" for="floatingInput">prenom</label>
+                
               </div>
-              
+              <div class="col-sm-12 col-md-6 form-floating mb-3">
+                <input type="text" class="form-control" id="nom" placeholder="Nom" required>
+                <label class="mx-2" for="nom">Nom</label>
+                
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Addresse courriel" required>
+                <label class="mx-2" for="email">Addresse courriel</label>
+                
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="phone" placeholder="Numéro de téléphone" required>
+                <label class="mx-2" for="phone">Numéro de téléphone</label>
+                
+              </div>
               <div class="form-group form-control-lg">
                   <select class="form-select form-select-lg" id="service">
-                    <option selected value="default">Choisissez un spécialiste</option>
-                    <option value="Stephanie">Dr Stephanie</option>
-                    <option value="Megan">Dr Megan</option>
-                    <option value="Lola">Lola</option>
-                    <option value="Emma-Ella">Emma & Ella</option>
+                    <option selected value="default">Choisissez un service</option>
+                    <option value="Check-up">Check-up</option>
+                    <option value="Chirurgies">Chirurgies</option>
+                    <option value="Test d'allergies">Test d'allergies</option>
+                    <option value="a">Leçons d'agileté</option>
+                    <option value="aa">Leçons de socialisation</option>
+                    <option value="aaa">Leçons de comportementé</option>
+                    <option value="aaaa">Leçons d'aquaforme</option>
                   </select>
               </div>
-                
-              <h1 class="small-disp">Date :</h1>
-
-              <div class="md-form row d-flex justify-content-center">
-                <input type="text" id="date-picker" class="form-control datepicker pic col-sm-12 col-md-6" placeholder="Date">
-                <input type="time" id="time-picker" class="form-control pic col-sm-12 col-md-6">
+              <div class="form-floating form-control-lg">
               </div>
-            
-              <div class="modal-footer d-flex justify-content-between">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                <div class="d-flex flex-row">
-                  <button class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="fas fa-chevron-left"></i> Date et heure</button>
-                  <button class="btn btn-primary" data-bs-target="#modal-merci" data-bs-toggle="modal" data-bs-dismiss="modal">Terminer <i class="fas fa-chevron-right"></i></button>
-                </div>
-              </div>
-            </form>
-          </div>
+          </form>
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+          <button class="btn btn-primary" id="toDate" data-bs-target="#modal2" data-bs-toggle="modal" data-bs-dismiss="modal" disabled>Date et heure <i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </div>
   </div>
-    
-  <div class="modal fade modal-fullscreen-sm-down" id="modal-merci" aria-hidden="true" aria-labelledby="modal-merciLabel2" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-dark">
-          <div class="modal-header">
-            <h1 class="display-4">Merci</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade modal-fullscreen-sm-down" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="row">
+            <h1 class="display-4 col-12">Rendez-vous</h1>
+            <h1 class="small-disp col-12">Choisissez la date et l'heure</h1>
           </div>
-          <div class="modal-body">
-            <h5>Votre demande de rendez-vous a été envoyée. Un spécialiste vous contactera dès que possible avec une confirmation de la date et l'heure de votre rendez-vous. 
-              <br>
-              <br>
-              Si vous avez d'autres questions, contactez-nous au (012) 345-6789
-            </h5>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Fermer</button>
-          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times" style="color: var(--text-color1);"></i></button>
+        </div>
+        <div class="modal-body">
+          <form class="needs-validation" novalidate>
+            <div class="progress mb-3 shadow2" style="background-color: var(--background-color-light);">
+              <div class="progress-bar" role="progressbar" style="width: 33.34%;background-color: var(--accent-color1);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Vos informations</div>
+              <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: var(--accent-color2);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Date et heure</div>
+              <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: rgb(18, 19, 21);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Terminer</div>
+            </div>
+            
+            <div class="form-group form-control-lg">
+                <select class="form-select form-select-lg" id="service">
+                  <option selected value="default">Choisissez un spécialiste</option>
+                  <option value="Stephanie">Dr Stephanie</option>
+                  <option value="Megan">Dr Megan</option>
+                  <option value="Lola">Lola</option>
+                  <option value="Emma-Ella">Emma & Ella</option>
+                </select>
+            </div>
+              
+            <h1 class="small-disp">Date :</h1>
+
+            <div class="md-form row d-flex justify-content-center">
+              <input type="text" id="date-picker" class="form-control datepicker pic col-sm-12 col-md-6" placeholder="Date">
+              <input type="time" id="time-picker" class="form-control pic col-sm-12 col-md-6">
+            </div>
+          
+            <div class="modal-footer d-flex justify-content-between">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+              <div class="d-flex flex-row">
+                <button class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="fas fa-chevron-left"></i> Date et heure</button>
+                <button class="btn btn-primary" data-bs-target="#modal-merci" data-bs-toggle="modal" data-bs-dismiss="modal">Terminer <i class="fas fa-chevron-right"></i></button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
+  </div>
+  </div>
+  
+  <div class="modal fade modal-fullscreen-sm-down" id="modal-merci" aria-hidden="true" aria-labelledby="modal-merciLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h1 class="display-4">Merci</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>Votre demande de rendez-vous a été envoyée. Un spécialiste vous contactera dès que possible avec une confirmation de la date et l'heure de votre rendez-vous. 
+            <br>
+            <br>
+            Si vous avez d'autres questions, contactez-nous au (012) 345-6789
+          </h5>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </html>

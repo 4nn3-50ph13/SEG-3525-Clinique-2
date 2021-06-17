@@ -32,7 +32,7 @@ html {
 }
 
 body {
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: relative;
     color: var(--text-color1);
     background-color: var(--background-color);
@@ -46,7 +46,7 @@ body {
 
 .header {
     background-color: var(--background-color);
-    position: relative;
+    /*position: relative;*/
     padding-bottom: 20px;
 }
 
@@ -106,12 +106,9 @@ h1 {
     text-align: center;
 }
 
-.nav-general {
-}
-
-.gen-nav {
-    padding: 0px;
-    height: 80%;
+.general-nav {
+    
+    width: 100%;
     background-color: var(--background-color-light);
 }
 
@@ -490,4 +487,26 @@ h1 {
     position: relative;
     overflow: auto;
     overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+.fixed {
+    position: fixed;
+    width : 100%;
+    top: 0;
+    z-index: 20;
+}
+
+.general {
+    position: relative;
+}
+
+.padded-general {
+    top: 68px;
 }
