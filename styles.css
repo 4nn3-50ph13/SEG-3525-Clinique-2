@@ -165,6 +165,7 @@ h1 {
 }
 
 .soins-vet {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
     grid-template-rows: 2fr 3fr 3fr 2fr;
