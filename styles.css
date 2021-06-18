@@ -444,3 +444,13 @@ h1 {
 .padded-general {
     top: 68px;
 }
+
+.emplacement {
+    background-color: var(--background-color-light1);
+    color: var(--text-color-dark);
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
