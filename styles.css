@@ -18,14 +18,18 @@ h5 {
 
 html {
     --foreground-color: rgba(24, 24, 26, 0.666);
+    --background-color-dark1: rgb(14, 15, 17);
+    --background-color-dark2: rgb(10, 10, 12);
     --background-color: rgb(14, 15, 17);
-    --background-color-light: #171a1d;
-    --text-color1: rgb(194, 196, 197); /*#c2c4c5*/
-    --text-color2: rgb(221, 221, 221); /*#dddddd*/
+    --background-color-light1: #cccccc;
+    --background-color-light2: #dfdfdf;
+    --text-color-dark: rgb(29, 29, 29); /*#1d1d1d*/
+    --text-color-light1: rgb(194, 196, 197); /*#c2c4c5*/
+    --text-color-light2: rgb(221, 221, 221); /*#dddddd*/
     --accent-color1:rgb(26, 95, 80); /*#1a5f50*/
     --accent-color2:rgb(50, 129, 105); /*#328169*/
     --accent-color3:rgb(151, 96, 33); /*#976021*/
-    --button-important-color: rgba(24, 24, 26);
+    --button-important-color: #dfdfdf;
     /*--line-color: rgba(194, 196, 197, 0.35);
     --btn-color:#42424281;*/
     background-color: var(--background-color-light);
@@ -35,23 +39,22 @@ body {
     /*overflow: hidden;*/
     position: relative;
     color: var(--text-color1);
-    background-color: var(--background-color);
+    background-color: var(--background-color-light2);
 }
 
 .container-fluid {
     color: var(--text-color1);
     padding: 0px;
-    background-color: var(--foreground-color);
 }
 
 .header {
-    background-color: var(--background-color);
+    background-color: var(--background-color-dark2);
     /*position: relative;*/
     padding-bottom: 20px;
 }
 
 .dogs {
-    text-shadow: 0px 0px 10px #0000007e;
+    text-shadow: 0px 0px 10px var(--background-color-dark2);
     position: absolute;
     font-weight: 700;
     margin-top: 10px;
@@ -78,11 +81,13 @@ h1 {
 
 .general-info {
     letter-spacing: 3px;
-    background-color: var(--background-color);
+    background-color: var(--background-color-dark2);
 }
 
 .dropdown-menu {
     background-color: var(--accent-color3);
+    font-weight: 600;
+    color: var(--text-color-light1);
 }
 
 .dropdown-menu a{
@@ -109,17 +114,17 @@ h1 {
 .general-nav {
     
     width: 100%;
-    background-color: var(--background-color-light);
+    background-color: var(--background-color-dark1);
 }
 
 .scrollspy-lecons {
-    
-    background-color: rgba(29, 29, 29, 0.5);
+    background-color: var(--background-color-dark1);
 }
 
 .scrollspy-content {
     padding-right: 0px;
-    background-color: var(--background-color-light);
+    background-color: var(--background-color-light2);
+    color: var(--text-color-dark);
     border-radius: 10px;
 } 
 
@@ -157,6 +162,8 @@ h1 {
 
 .horaire {
     display: grid;
+    padding-left: 0;
+    padding-right: 0;
     grid-template-columns: 1fr 10fr 1fr;
     grid-template-rows: 2fr 3fr 3fr 2fr;
 }
@@ -165,7 +172,6 @@ h1 {
 }
 
 .soins-vet {
-    margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
     grid-template-rows: 2fr 3fr 3fr 2fr;
@@ -175,18 +181,19 @@ h1 {
 }
 .item1 { 
     grid-area: 1 / span 3 / 2 / 4;
-    background-color: var(--foreground-color);
+    background-color: var(--background-color-light1);
     opacity: 100%;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: var(--text-color-dark);
 }
 .item2 { 
     grid-area: 3 / 3 / 4 / 4;
-    background-color: var(--background-color-light); 
+    background-color: var(--background-color-light2); 
  }
 .item3 { 
     grid-area: 2 / 1 / 3 / 2;
-    
-    background-color: var(--foreground-color);
+    background-color: var(--background-color-light1);
     opacity: 100%;
 }
 .item4 { 
@@ -218,22 +225,21 @@ h1 {
     font-size: 1em;
 }
 .item4-3{
-    background-color: var(--bs-dark);
+    background-color: var(--background-color-dark1);
     color: var(--text-color1);
 }
 .item5 { 
     grid-area: 3 / 1 / 4 / 2;
-    background-color: var(--background-color-light); 
+    background-color: var(--background-color-light2);
 }
 .item6 { 
     grid-area: 2 / 3 / 3 / 4;
-    
-    background-color: var(--foreground-color);
+    background-color: var(--background-color-light1);
     opacity: 100%;
  }
  .item7 { 
      grid-area: 4 / span 3 / 4 / 4;
-     background-color: var(--background-color-light);
+     background-color: var(--background-color-light2);
  }
 
 .small-disp {
@@ -246,41 +252,41 @@ h1 {
     font-size: calc((1.475rem + 1.5vw)/2);
 }
 .btn-primary.disabled, .btn-primary:disabled {
-    color: var(--text-color1);
-    background-color: var(--background-color);
+    color: var(--text-color-light2);
+    background-color: var(--foreground-color);
     border: none;
 }
 .form-check-input {
-    background-color: var(--background-color-light);
-    border: var(--text-color1);
+    background-color: var(--background-color-light1);
+    color: var(--text-color-light2);
 }
 
 .form-check-input:focus {
-    border-color: var(--text-color1);
+    border-color: var(--accent-color2);
     outline: 0;
     box-shadow: 0 0 0 0.25rem var(--accent-color2);
 }
 
 .btn-primary {
-    color: var(--text-color1);
+    color: var(--text-color-light2);
     background-color: var(--accent-color1);
     border-color: var(--accent-color1);
 }
 
 .btn-primary:hover {
-    color: var(--text-color1);
+    color: var(--text-color-light2);
     background-color: var(--accent-color2);
     border-color: var(--accent-color2);
 }
 
 .btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
-    color: var(--text-color1);
+    color: var(--text-color-light2);
     background-color: var(--accent-color2);
     border-color: var(--accent-color2);
 }
 
 .btn-check:focus+.btn-primary, .btn-primary:focus {
-    color: var(--text-color1);
+    color: var(--text-color-light2);
     background-color: var(--accent-color2);
     border-color: var(--accent-color2);
     box-shadow: 0 0 0 0.25rem var(--accent-color2);
@@ -291,7 +297,7 @@ h1 {
 }
 
 .modal-content{
-    background-color: var(--background-color-light);
+    background-color: var(--background-color-light1);
 }
 .modal-header {
     border-bottom: 1px solid var(--accent-color3);
@@ -299,38 +305,16 @@ h1 {
 .modal-footer {
     border-top: 1px solid var(--accent-color3);
 }
-.form-group input {
-    color: var(--text-color2);
-    background-color: var(--bs-dark);
-    border: none;
-}
-.form-group option {
-    color: var(--text-color2);
-    background-color: var(--bs-dark);
-    border: none;
-}
-.form-group textarea {
-    color: var(--text-color2);
-    background-color: var(--bs-dark);
-    border: none;
-}
-.form-floating:focus {
-    color: var(--text-color1);
-    background-color: var(--bs-dark);
-    border-color: var(--accent-color1);
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem var(--accent-color2);
-}
 .form-control:focus {
-    color: var(--text-color1);
-    background-color: var(--bs-dark);
+    color: var(--text-color-dark);
+    background-color: var(--background-color-light2);
     border-color: var(--accent-color1);
     outline: 0;
     box-shadow: 0 0 0 0.25rem var(--accent-color2);
 }
 .form-floating .form-control {
-    color: var(--text-color1);
-    background-color: var(--bs-dark);
+    color: var(--text-color-dark);
+    background-color: var(--background-color-light2);
     outline: 0;
     border: none;
 }
@@ -338,6 +322,17 @@ h1 {
     height: calc(7rem + 2px);
 }
 
+.form-select {
+    color: var(--text-color-dark);
+    background-color: var(--background-color-light2);
+    border: none;
+    font-size: 1rem;
+}
+.form-select:focus {
+    border-color: var(--accent-color1);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--accent-color2);
+}
 .modal-dialog {
     max-width: 600px;
     margin: 1.75rem auto;
@@ -357,61 +352,9 @@ h1 {
     margin: 10px;
 }
 
-.heure {
-    background-color: var(--accent-color1);
-}
-
-.btn-group-vertical {
-    width:100%;
-}
-
-.btn-group-vertical label{
-    background-color: var(--bs-dark);
-    margin: 0px;
-}
-
-.btn-group1 {
-    background-color: var(--bs-dark);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    border-radius: 0;
-}
-.btn-group1 label {
-    margin: 0px;
-}
-.btn-outline-primary {
-    color: var(--text-color1);
-    border-color: var(--bs-dark);
-}
-.btn-group1>.btn {
-    border-radius: 0;
-}
-.btn-check:active+.btn-outline-primary, .btn-check:checked+.btn-outline-primary, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show, .btn-outline-primary:active {
-    color: var(--text-color1);
-    border-color: var(--accent-color1);
-    background-color: var(--accent-color3);
-}
-.btn-check:active+.btn-outline-primary:focus, .btn-check:checked+.btn-outline-primary:focus, .btn-outline-primary.active:focus, .btn-outline-primary.dropdown-toggle.show:focus, .btn-outline-primary:active:focus {
-    box-shadow: 0 0 0 0.25rem var(--accent-color1);
-}
-.btn-outline-primary:hover {
-    color: var(--text-color1);
-    border-color: var(--accent-color1);
-    background-color: var(--accent-color2);
-}
-.btn-check:focus+.btn-outline-primary, .btn-outline-primary:focus {
-    box-shadow: 0 0 0 0.25rem var(--accent-color1);
-}
-
-.form-select {
-    color: var(--text-color2);
-    background-color: var(--bs-dark);
-    border: none;
-}
-
 .separator{
-    opacity: 50%;
-    margin: 20px;
+    background-color: var(--background-color-light2);
+    padding: 20px;
 }
 
 .carousel-dark .carousel-caption {
@@ -426,9 +369,14 @@ h1 {
     text-shadow: 0px 0px 20px #000000;
 }
 
+.accordion {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .accordion-button {
-    background-color: var(--bs-dark);
-    color: var(--text-color2);
+    background-color: var(--background-color-dark1);
+    color: var(--text-color-light2);
     padding: 0.5rem 1.25rem;
 }
 .accordion-button:focus {
@@ -436,8 +384,8 @@ h1 {
     box-shadow: none;
 }
 .accordion-button:not(.collapsed) {
-    background-color: var(--bs-dark);
-    color: var(--text-color2);
+    background-color: var(--background-color-dark1);
+    color: var(--text-color-light2);
 }
 .accordion-button::after {
     background-image: url("images/arrow-up.png");
@@ -446,11 +394,13 @@ h1 {
     background-image: url("images/arrow-up.png");
 }
 .accordion-item {
-    background-color: var(--bs-dark);
-    color: var(--text-color2);
+    padding: 20px;
+    background-color: var(--background-color-dark1);
+    color: var(--text-color-light2);
+    border: 0.1em solid var(--background-color-light2);
 }
 .accordion-item h4 {
-    background-color: var(--bs-dark);
+    background-color: var(--background-color-dark1);
     color: var(--text-color2);
     padding-right: 10px
 }
@@ -459,35 +409,18 @@ h1 {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5)!important;
 }
 
-.jour {
-    background-color: var(--background-color-light);
-    border-color: var(--background-color-light);
-    padding: 1px;
-}
-
 .nos-specialistes {
+    background-color: var(--background-color-light2);
     text-align: center;
     justify-content: center;
 }
 
+.nos-specialistes h1{
+    color: var(--text-color-dark);
+}
+
 .btn-close {
     background: none;
-}
-
-.pic {
-    font-size: calc((1.5rem + 2.5vw)/2);
-    color: var(--text-color1);
-    background-color: var(--bs-dark);
-    border: none;
-    margin: 10px;
-    width: 45%;
-}
-
-.scrollspy-general {
-    height: 585px;
-    position: relative;
-    overflow: auto;
-    overflow-x: hidden;
 }
 
 

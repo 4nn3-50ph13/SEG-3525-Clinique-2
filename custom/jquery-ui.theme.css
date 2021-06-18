@@ -8,7 +8,7 @@
  *
  * http://api.jqueryui.com/category/theming/
  *
- * To view and modify this theme, visit http://jqueryui.com/themeroller/?scope=&folderName=custom-theme&bgImgOpacityError=&bgImgOpacityHighlight=&bgImgOpacityActive=&bgImgOpacityHover=&bgImgOpacityDefault=&bgImgOpacityContent=&bgImgOpacityHeader=&cornerRadiusShadow=8px&offsetLeftShadow=0px&offsetTopShadow=0px&thicknessShadow=5px&opacityShadow=30&bgImgOpacityShadow=0&bgTextureShadow=flat&bgColorShadow=%23666666&opacityOverlay=30&bgImgOpacityOverlay=0&bgTextureOverlay=flat&bgColorOverlay=%23aaaaaa&iconColorError=%23cc0000&fcError=%235f3f3f&borderColorError=%23f1a899&bgTextureError=flat&bgColorError=%23fddfdf&iconColorHighlight=%23dddddd&fcHighlight=%23dddddd&borderColorHighlight=%23328169&bgTextureHighlight=flat&bgColorHighlight=%23328169&iconColorActive=%23dddddd&fcActive=%23dddddd&borderColorActive=%23976021&bgTextureActive=flat&bgColorActive=%23976021&iconColorHover=%23c2c4c5&fcHover=%23c2c4c5&borderColorHover=%23328169&bgTextureHover=flat&bgColorHover=%23328169&iconColorDefault=%23c2c4c5&fcDefault=%23c2c4c5&borderColorDefault=%23212529&bgTextureDefault=flat&bgColorDefault=%23212529&iconColorContent=%231a5f50&fcContent=%23c2c4c5&borderColorContent=%23212529&bgTextureContent=flat&bgColorContent=%23212529&iconColorHeader=%23c2c4c5&fcHeader=%23c2c4c5&borderColorHeader=%231a5f50&bgTextureHeader=flat&bgColorHeader=%231a5f50&cornerRadius=5px&fwDefault=normal&fsDefault=1em&ffDefault=system-ui%2C-apple-system%2C%22Segoe%20UI%22%2CRoboto%2C%22Helvetica%20Neue%22%2CArial%2C%22Noto%20Sans%22%2C%22Liberation%20Sans%22%2Csans-serif%2C%22Apple%20Color%20Emoji%22%2C%22Segoe%20UI%20Emoji%22%2C%22Segoe%20UI%20Symbol%22%2C%22Noto%20Color%20Emoji%22
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/?scope=&folderName=custom-theme&bgImgOpacityError=&bgImgOpacityHighlight=&bgImgOpacityActive=&bgImgOpacityHover=&bgImgOpacityDefault=&bgImgOpacityContent=&bgImgOpacityHeader=&cornerRadiusShadow=8px&offsetLeftShadow=0px&offsetTopShadow=0px&thicknessShadow=5px&opacityShadow=30&bgImgOpacityShadow=0&bgTextureShadow=flat&bgColorShadow=%23666666&opacityOverlay=30&bgImgOpacityOverlay=0&bgTextureOverlay=flat&bgColorOverlay=%23212529&iconColorError=%23cc0000&fcError=%235f3f3f&borderColorError=%23f1a899&bgTextureError=flat&bgColorError=%23fddfdf&iconColorHighlight=%231d1d1d&fcHighlight=%231d1d1d&borderColorHighlight=%23c2c4c5&bgTextureHighlight=flat&bgColorHighlight=%23c2c4c5&iconColorActive=%23dddddd&fcActive=%23dddddd&borderColorActive=%23976021&bgTextureActive=flat&bgColorActive=%23976021&iconColorHover=%23c2c4c5&fcHover=%23c2c4c5&borderColorHover=%23328169&bgTextureHover=flat&bgColorHover=%23328169&iconColorDefault=%23c2c4c5&fcDefault=%231d1d1d&borderColorDefault=%23dfdfdf&bgTextureDefault=flat&bgColorDefault=%23dfdfdf&iconColorContent=%231a5f50&fcContent=%231d1d1d&borderColorContent=%23cccccc&bgTextureContent=flat&bgColorContent=%23cccccc&iconColorHeader=%23c2c4c5&fcHeader=%23c2c4c5&borderColorHeader=%231a5f50&bgTextureHeader=flat&bgColorHeader=%231a5f50&cornerRadius=5px&fwDefault=normal&fsDefault=1em&ffDefault=system-ui%2C-apple-system%2C%22Segoe%20UI%22%2CRoboto%2C%22Helvetica%20Neue%22%2CArial%2C%22Noto%20Sans%22%2C%22Liberation%20Sans%22%2Csans-serif%2C%22Apple%20Color%20Emoji%22%2C%22Segoe%20UI%20Emoji%22%2C%22Segoe%20UI%20Symbol%22%2C%22Noto%20Color%20Emoji%22
  */
 
 
@@ -29,15 +29,15 @@
 	font-size: 1em;
 }
 .ui-widget.ui-widget-content {
-	border: 1px solid #212529;
+	border: 1px solid #dfdfdf;
 }
 .ui-widget-content {
-	border: 1px solid #212529;
-	background: #212529;
-	color: #c2c4c5;
+	border: 1px solid #cccccc;
+	background: #cccccc;
+	color: #1d1d1d;
 }
 .ui-widget-content a {
-	color: #c2c4c5;
+	color: #1d1d1d;
 }
 .ui-widget-header {
 	border: 1px solid #1a5f50;
@@ -60,10 +60,10 @@
 works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
-	border: 1px solid #212529;
-	background: #212529;
+	border: 1px solid #dfdfdf;
+	background: #dfdfdf;
 	font-weight: normal;
-	color: #c2c4c5;
+	color: #1d1d1d;
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -72,7 +72,7 @@ a.ui-button,
 a:link.ui-button,
 a:visited.ui-button,
 .ui-button {
-	color: #c2c4c5;
+	color: #1d1d1d;
 	text-decoration: none;
 }
 .ui-state-hover,
@@ -133,18 +133,18 @@ a.ui-button:active,
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
-	border: 1px solid #328169;
-	background: #328169;
-	color: #dddddd;
+	border: 1px solid #c2c4c5;
+	background: #c2c4c5;
+	color: #1d1d1d;
 }
 .ui-state-checked {
-	border: 1px solid #328169;
-	background: #328169;
+	border: 1px solid #c2c4c5;
+	background: #c2c4c5;
 }
 .ui-state-highlight a,
 .ui-widget-content .ui-state-highlight a,
 .ui-widget-header .ui-state-highlight a {
-	color: #dddddd;
+	color: #1d1d1d;
 }
 .ui-state-error,
 .ui-widget-content .ui-state-error,
@@ -213,7 +213,7 @@ a.ui-button:active,
 }
 .ui-state-highlight .ui-icon,
 .ui-button .ui-state-highlight.ui-icon {
-	background-image: url("images/ui-icons_dddddd_256x240.png");
+	background-image: url("images/ui-icons_1d1d1d_256x240.png");
 }
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
@@ -433,7 +433,7 @@ a.ui-button:active,
 
 /* Overlays */
 .ui-widget-overlay {
-	background: #aaaaaa;
+	background: #212529;
 	opacity: .3;
 	filter: Alpha(Opacity=30); /* support: IE8 */
 }
