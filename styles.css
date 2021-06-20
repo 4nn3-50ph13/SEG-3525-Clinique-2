@@ -28,7 +28,7 @@ html {
     --text-color-light2: rgb(221, 221, 221); /*#dddddd*/
     --accent-color1:rgb(26, 95, 80); /*#1a5f50*/
     --accent-color2:rgb(50, 129, 105); /*#328169*/
-    --accent-color3:rgb(151, 96, 33); /*#976021*/
+    --accent-color3:rgb(88, 87, 97); /*rgb(151, 96, 33) #976021*/
     --button-important-color: #dfdfdf;
     /*--line-color: rgba(194, 196, 197, 0.35);
     --btn-color:#42424281;*/
@@ -36,8 +36,7 @@ html {
 }
 
 body {
-    /*overflow: hidden;*/
-    position: relative;
+    overflow-x: hidden;
     color: var(--text-color1);
     background-color: var(--background-color-light2);
 }
@@ -305,6 +304,12 @@ h1 {
 .modal-footer {
     border-top: 1px solid var(--accent-color3);
 }
+.form-control {
+    color: var(--text-color-dark);
+    background-color: var(--background-color-light2);
+    outline: 0;
+    border: none;
+}
 .form-control:focus {
     color: var(--text-color-dark);
     background-color: var(--background-color-light2);
@@ -353,8 +358,8 @@ h1 {
 }
 
 .separator{
-    background-color: var(--background-color-light2);
-    padding: 20px;
+    background-color: var(--background-color-light1);
+    padding: 30px;
 }
 
 .carousel-dark .carousel-caption {
@@ -370,6 +375,8 @@ h1 {
 }
 
 .accordion {
+    padding-left: 5%;
+    padding-right: 5%;
     margin-top: 50px;
     margin-bottom: 50px;
 }

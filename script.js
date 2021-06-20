@@ -83,30 +83,22 @@ function validateService(service) {
 // Make sure in your version that you associate Days to remove with Experts (e.g. John doesn't work Mondays)
 // var availableDates = ["06/29/2020","07/07/2020","07/10/2020"];
 
-//                     steph    megan    lola   emma & ellavar 
-var availableDates = {
-  "Stephanie":[0,3,4,6],
-  "megan":[3,6],
-  "lola":[1,2,3,4,5],
-  "emma-ella":[0,1,2,6]
-};
+//                     all    steph    megan    lola   emma & ellavar 
+var availableDates = [['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Dimanche'],['Lundi','Jeudi','Vendredi','Dimanche'],['Jeudi','Dimanche'],['Lundi','Mardi','Mercredi','Jeudi','Vendredi'],['Lundi','Mardi','Jeudi','Dimanche']];
+
 const setDateFormat = "dd/MM/yy";
-	
 
-function disableDates2(specialist) {
-    // get chosen professionnal
-    var s = document.getElementById(specialist).value;
+const setMonthNames= ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+const setMonthNamesShort= ['Janv.', 'Févr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'];
+const setDayNames= ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']
+const setDayNamesShort= ['Dim.', 'Lun.', 'Mar.', 'Mer.', 'Jeu.', 'Ven.', 'Sam.'];
 
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ availableDates.indexOf(string) === -1 ]
-}
-
+var specialiste = 0;
 
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
 
     // phone validation, it calls validatePhone
-
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
             alert("Attention! Le numéro de téléphone entré n'est pas du format xxx xxx xxxx");
@@ -175,16 +167,39 @@ $(document).ready(function(){
             toNext()
         }
     });
+    $("#specialiste").on("change", function(){
+        specialiste = $("#specialiste").val();
+        if (specialiste > 0){
+            $("#terminer").prop("disabled",false);
+        }else {
+            $("#terminer").prop("disabled",true);
+        }
+    });
 
-    $( "#date-picker" ).datepicker(
+    $("#date-picker").datepicker(
         {
             dateFormat: setDateFormat,
             maxDate: '+4M',
-            // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends
+            minDate: new Date(),
+            monthNames: setMonthNames,
+            monthNamesShort: setMonthNamesShort,
+            dayNames: setDayNames,
+            dayNamesShort: setDayNamesShort,
+            beforeShowDay: function(d) {        
+                var year = d.getFullYear(),
+                    month = (setMonthNames[d.getMonth()]),
+                    day = setDayNames[d.getUTCDay()];
+
+                var formatted = day + '/' + month + '/' + year;
+                console.log(specialiste);
+                if ($.inArray(day, availableDates[specialiste]) != -1) {
+                    return [true, "","Available"]; 
+                } else{
+                    return [false,"","unAvailable"]; 
+                }
+            }
         }
     );
-    $.datepicker.setDefaults( $.datepicker.regional[ "fr" ] );
 
     // Look at the different events on which an action can be performed
     // https://www.w3schools.com/jquery/jquery_events.asp
