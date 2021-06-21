@@ -1,19 +1,18 @@
 
 ::-webkit-scrollbar {
-    background-color: #111314;
-    color: var(--button-important-color);
+    background-color: var(--foreground-color);
 }
 
 ::-webkit-scrollbar-corner {
-    background-color: transparent;
+    background-color: var(--background-color-light2);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--background-color-light);
+    background-color: var(--background-color-light1);
 }
 
 h5 {
-    color: var(--text-color2);
+    color: var(--text-color-dark);
 }
 
 html {
@@ -37,12 +36,11 @@ html {
 
 body {
     overflow-x: hidden;
-    color: var(--text-color1);
+    color: var(--text-color-dark);
     background-color: var(--background-color-light2);
 }
 
 .container-fluid {
-    color: var(--text-color1);
     padding: 0px;
 }
 
@@ -54,6 +52,7 @@ body {
 
 .dogs {
     text-shadow: 0px 0px 10px var(--background-color-dark2);
+    color: var(--text-color-light2);
     position: absolute;
     font-weight: 700;
     margin-top: 10px;
@@ -63,6 +62,7 @@ body {
 }
 
 .clinique {
+    color: var(--text-color-light1);
     font-size: calc((1.475rem + 2.7vw)/3);
     font-weight: 400;
     margin-top: 5px;
@@ -73,7 +73,7 @@ body {
 }
 
 h1 {
-    color: var(--text-color2);
+    color: var(--text-color-dark);
     margin: 0;
     letter-spacing: 4px;
 }
@@ -90,15 +90,15 @@ h1 {
 }
 
 .dropdown-menu a{
-    color: var(--text-color2);
+    color: var(--text-color-dark);
 }
 
 .table {
-    color: var(--text-color1);
+    color: var(--text-color-light2);
 }
 
 .table-hover {
-    --bs-table-hover-color: var(--text-color2);
+    --bs-table-hover-color: var(--text-color-dark);
 }
 
 .navbar {
@@ -144,11 +144,11 @@ h1 {
 }
 
 .nav-link:hover {
-    color: var(--text-color1);
+    color: var(--text-color-light1);
 }
 
 .nav-link:focus {
-    color: var(--text-color1);
+    color: var(--text-color-light2);
 }
 
 .soc {
@@ -210,12 +210,12 @@ h1 {
 }
 .item4-1{
     background-color: var(--accent-color3);
-    color: var(--text-color2);
+    color: var(--text-color-light2);
     font-weight: 400!important;
 }
 .item4-2{
     background-color: var(--accent-color1);
-    color: var(--text-color1);
+    color: var(--text-color-light2);
 }
 .item4-1 .badge {
     font-size: 1em;
@@ -225,7 +225,7 @@ h1 {
 }
 .item4-3{
     background-color: var(--background-color-dark1);
-    color: var(--text-color1);
+    color: var(--text-color-light2);
 }
 .item5 { 
     grid-area: 3 / 1 / 4 / 2;
@@ -347,7 +347,7 @@ h1 {
     height: 30px;
     font-size: calc((1.475rem + 2.7vw)/3.5);
     font-weight: 300;
-    border: 0.1em solid var(--accent-color1);
+    border: none;
 }
 
 .calendar {
@@ -364,17 +364,22 @@ h1 {
 
 .carousel-dark .carousel-caption {
     background-color: var(--foreground-color);
-    color: var(--text-color1);
+    color: var(--text-color-light2);
     text-shadow: 0px 0px 20px #000000;
 }
 
 .carousel-caption p {
-    color: var(--text-color2);
+    color: var(--text-color-light2);
     font-size: 20px;
+    text-shadow: 0px 0px 20px #000000;
+}
+.carousel-caption h5 {
+    color: var(--text-color-light2);
     text-shadow: 0px 0px 20px #000000;
 }
 
 .accordion {
+    text-align: center;
     padding-left: 5%;
     padding-right: 5%;
     margin-top: 50px;
@@ -407,8 +412,7 @@ h1 {
     border: 0.1em solid var(--background-color-light2);
 }
 .accordion-item h4 {
-    background-color: var(--background-color-dark1);
-    color: var(--text-color2);
+    color: var(--text-color-light2);
     padding-right: 10px
 }
 

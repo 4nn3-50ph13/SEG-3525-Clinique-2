@@ -27,29 +27,32 @@
             <h1 class="dogs display-1 p-3">DOGS!<p1 class="clinique">Clinique Vétérinaire</p1></h1>
           </div>
           <div class="row general-info p-3 d-flex justify-content-around">
-              <div class="col-sm-12 col-md-4 d-flex justify-content-center" ><i class="far fa-compass" style="font-size:20px;color:var(--accent-color2)"></i><h1 class="small-disp"> 777 Ave Élliot Ottawa, ON</h1></div>
-              <div class="col-sm-12 col-md-3 d-flex justify-content-center"><i class="fa fa-phone" style="font-size:20px;color:var(--accent-color2)"></i class="display-1"><h1 class="small-disp"> (012) 345-6789</h1></div>
-              <div class="col-sm-12 col-md-4 d-flex justify-content-center"><i class="far fa-envelope-open" style="font-size:20px;color:var(--accent-color2)"></i class="display-1"><h1 class="small-disp"> elliot@goodBoy.com</h1></div>
+              <div class="col-sm-12 col-md-4 d-flex justify-content-center" ><i class="far fa-compass" style="font-size:20px;color:var(--accent-color2)"></i><h1 class="small-disp" style="color:var(--text-color-light1)"> 777 Ave Élliot Ottawa, ON</h1></div>
+              <div class="col-sm-12 col-md-3 d-flex justify-content-center"><i class="fa fa-phone" style="font-size:20px;color:var(--accent-color2)"></i class="display-1"><h1 class="small-disp" style="color:var(--text-color-light1)"> (012) 345-6789</h1></div>
+              <div class="col-sm-12 col-md-4 d-flex justify-content-center"><i class="far fa-envelope-open" style="font-size:20px;color:var(--accent-color2)"></i class="display-1"><h1 class="small-disp" style="color:var(--text-color-light1)"> elliot@goodBoy.com</h1></div>
           </div>
         </header>
         <nav class="nav general-nav">
           <div class="row navbar-container nav-pills general-nav soc">
             <li class="nav-item col-sm-3 soc">
-              <a class="nav-link" href="#vet">Soins Vétérinaires</a>
+              <a class="nav-link" href="#vet"><i class="fas fa-heartbeat" style="color:var(--accent-color2);"></i> Soins Vétérinaires</a>
             </li>
             <li class="nav-item col-sm-3 soc">
-              <a class="nav-link" href="#services-accordion">Services variés</a>
+              <a class="nav-link" href="#services-accordion"><i class="fas fa-dog" style="color:var(--accent-color2);"></i> Services variés</a>
             </li>
             <li class="nav-item col-sm-3 soc">
-              <a class="nav-link" href="#specialistes">Spécialistes</a>
+              <a class="nav-link" href="#specialistes"><i class="fas fa-user-md" style="color:var(--accent-color2);"></i> Spécialistes</a>
             </li>
             <li class="nav-item col-sm-3 soc">
-              <a class="nav-link" href="#horaire">horaire</a>
+              <a class="nav-link" href="#horaire"><i class="fas fa-business-time" style="color:var(--accent-color2);"></i> Horaire</a>
             </li>
           </div>
         </nav>
         <div class="general">
-          <div class="soins-vet small-disp" id="vet">
+          <div id="vet" class="separator d-flex justify-content-center" style="padding-bottom: 0px;">
+            <i class="fas fa-heartbeat" style="font-size:60px;color:var(--accent-color2);"></i>
+          </div>
+          <div class="soins-vet small-disp">
             <div class="item1"><h1 class="display-4">Soins Vétérinaires</h1><h5>Contactez-nous pour prendre un rendez-vous en clinique, téléphonique ou chez-vous</h5></div>
             <div class="item2"></div>
             <div class="item3"></div>
@@ -62,7 +65,7 @@
                 <dd>Premier-soins</dd>
                 <dd>Chirurgies</dd>
                 <dd>Autres</dd>
-                <a type="button" class="btn btn-lg shadow2" style="background-color:var(--button-important-color);color:var(--text-color-dark);font-weight:600" href="#horaire"><i class="fas fa-business-time" style="font-size:20px;color:var(--accent-color3)"></i> Horaire</a>
+                <a type="button" class="btn btn-lg shadow2" style="background-color:var(--button-important-color);color:var(--text-color-dark);font-weight:600" href="#horaire"><i class="fas fa-business-time" style="font-size:20px;color:var(--text-color-dark)"></i> Horaire</a>
               </div>
               <div class="item4-2 col-sm-12 col-md-4 p-3">
                 <dt>Sur rendez-vous</dt>
@@ -78,12 +81,16 @@
                 <dd>Pesées</dd>
                 <dd>Consultations</dd>
                 <dd>Autres</dd>
-                <a type="button" class="btn btn-lg shadow2"style="background-color:var(--button-important-color);color:var(--text-color-dark);font-weight:600"  href="#horaire"><i class="fas fa-business-time" style="font-size:20px;color:var(--accent-color3)"></i> Horaire</a>
+                <a type="button" class="btn btn-lg shadow2"style="background-color:var(--button-important-color);color:var(--text-color-dark);font-weight:600"  href="#horaire"><i class="fas fa-business-time" style="font-size:20px;color:var(--text-color-dark)"></i> Horaire</a>
               </div>
             </div>
           </div>
-          <div class="accordion accordion-flush" id="services-accordion">
-            <div class="accordion-item">
+          <div id="services-accordion" class="separator d-flex justify-content-center" style="padding-bottom: 0px;background-color:var(--background-color-light2);">
+            <i class="fas fa-dog" style="font-size:60px;color:var(--accent-color2);"></i>
+          </div>
+          <div class="accordion accordion-flush">
+            <h1 class="display-4">Services variés<h5>Ces services sont offerts à la clinique en plus des services vétérinaires habituels</h5></h1>
+            <div class="accordion-item shadow2">
               <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed d-flex justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                   <h4 class="display-4">Leçons</h4>
@@ -278,7 +285,7 @@
                   </div>
                 </div>
               </div>
-            <div class="accordion-item">
+            <div class="accordion-item shadow2">
               <h2 class="accordion-header" id="flush-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                   <h4 class="display-4">Toilettage</h4>
@@ -411,7 +418,7 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item shadow2">
               <h2 class="accordion-header" id="flush-headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                   <h4 class="display-4">Achetez</h4>
@@ -562,9 +569,13 @@
             </div>
             </div>
           </div>
-          <div class="nos-specialistes row" id="specialistes">
+          <br>
+          <div id="specialistes" class="separator d-flex justify-content-center mt-3" style="padding-bottom: 0px;background-color:var(--background-color-light2);">
+            <i class="fas fa-user-md" style="font-size:60px;color:var(--accent-color2);"></i>
+          </div>
+          <div class="nos-specialistes row">
               <div class="specialistes col-sm-12 col-md-6 p-3 my-3">
-                  <h1 class="display-4">Nos spécialistes</h1>
+                  <h1 class="display-4">Nos spécialistes<h5>Prêts à vous rencontrer et prendre soin de votre animal de compagnie</h5></h1>
               </div>
               <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -613,7 +624,12 @@
                 </button>
               </div>
           </div>
-          <div class="horaire" id="horaire">
+          <br>
+          <br>
+          <div id="horaire" class="separator d-flex justify-content-center mt-4" style="padding-bottom: 0px;background-color:var(--background-color-light2);">
+            <i class="far fa-calendar-alt" style="font-size:60px;color:var(--accent-color2);"></i>
+          </div>
+          <div class="horaire">
             <div class="item1" style="background-color: var(--background-color-light2);"><h1 class="display-4">Horaire de la clinique</h1><h5>Contactez-nous pour prendre un rendez-vous en clinique, téléphonique ou chez-vous</h5></div>
             <div class="item2" style="background-color: var(--background-color-light1);"></div>
             <div class="item3" style="background-color: var(--background-color-light2);"></div>
@@ -662,7 +678,7 @@
                 </table>
               </div>
               <div class="item4-1 p-3 col-sm-12 col-md-4 small-disp">
-                Les <span class="badge badge-dark">soins d'urgence</span> et les services walk-in sont offerts à <span class="badge badge-dark">tout temps</span> lors de now heures d'ouverture.
+                Les <span class="badge badge-dark">soins d'urgence</span> et les services walk-in sont offerts à <span class="badge badge-dark">tout temps</span> lors de nos heures d'ouverture.
               </div>
             </div>
           </div>
@@ -701,7 +717,7 @@
             <h1 class="display-4 col-12">Rendez-vous</h1>
             <h1 class="small-disp col-12">Entrez vos informations</h1>
           </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times" style="color: var(--text-color1);"></i></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times" style="color: var(--text-color-dark);"></i></button>
         </div>
         <div class="modal-body">
           <div class="progress mb-3 shadow2" style="background-color: var(--background-color-light);">
@@ -713,8 +729,7 @@
             <div class="row">
               <div class="col-sm-12 col-md-6 form-floating mb-3">
                 <input type="text" class="form-control" id="prenom" placeholder="Prénom" required>
-                <label class="mx-2" for="floatingInput">prenom</label>
-                
+                <label class="mx-2" for="floatingInput">Prénom</label>
               </div>
               <div class="col-sm-12 col-md-6 form-floating mb-3">
                 <input type="text" class="form-control" id="nom" placeholder="Nom" required>
@@ -731,25 +746,15 @@
                 <label class="mx-2" for="phone">Numéro de téléphone</label>
                 
               </div>
-              <div class="form-group form-control-lg">
-                  <select class="form-select form-select-lg" id="service">
-                    <option selected value="default">Choisissez un service</option>
-                    <option value="Check-up">Check-up</option>
-                    <option value="Chirurgies">Chirurgies</option>
-                    <option value="Test d'allergies">Test d'allergies</option>
-                    <option value="a">Leçons d'agileté</option>
-                    <option value="aa">Leçons de socialisation</option>
-                    <option value="aaa">Leçons de comportementé</option>
-                    <option value="aaaa">Leçons d'aquaforme</option>
-                  </select>
-              </div>
-              <div class="form-floating form-control-lg">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="debit" title="On vous demande un dépot de 20$." placeholder="Carte de crédit">
+                <label class="mx-2" for="debit">Carte de crédit</label>
               </div>
           </form>
         </div>
         <div class="modal-footer d-flex justify-content-between">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-          <a data-toggle="tooltip" data-placement="top" title="Veuillez remplir le formulaire pour continuer!">
+          <a data-toggle="tooltip" data-placement="top" title="Veuillez remplir le formulaire pour continuer!" id="terminer-tooltip">
             <button class="btn btn-primary" data-bs-target="#modal-merci" data-bs-toggle="modal" data-bs-dismiss="modal" id="terminer" disabled>Date et heure<i class="fas fa-chevron-right"></i></button>
           </a>
         </div>
@@ -766,7 +771,7 @@
             <h1 class="display-4 col-12">Rendez-vous</h1>
             <h1 class="small-disp col-12">Choisissez la date et l'heure</h1>
           </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times" style="color: var(--text-color1);"></i></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times" style="color: var(--text-color-dark);"></i></button>
         </div>
         <div class="modal-body">
           <form class="needs-validation" novalidate>
@@ -774,6 +779,18 @@
               <div class="progress-bar" role="progressbar" style="width: 33.34%;background-color: var(--accent-color1);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Vos informations</div>
               <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: var(--accent-color2);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Date et heure</div>
               <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: rgb(18, 19, 21);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Terminer</div>
+            </div>
+            <div class="form-group form-control-lg">
+                <select class="form-select form-select-lg" id="service">
+                  <option selected value="default">Choisissez un service</option>
+                  <option value="Check-up">Check-up</option>
+                  <option value="Chirurgies">Chirurgies</option>
+                  <option value="Test d'allergies">Test d'allergies</option>
+                  <option value="a">Leçons d'agileté</option>
+                  <option value="aa">Leçons de socialisation</option>
+                  <option value="aaa">Leçons de comportementé</option>
+                  <option value="aaaa">Leçons d'aquaforme</option>
+                </select>
             </div>
             <div class="form-group form-control-lg">
                 <select class="form-select form-select-lg" id="specialiste">

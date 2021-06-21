@@ -217,7 +217,12 @@ $(document).ready(function(){
     // the message of the tooltip is encoded in the input (in the HTML file)
     $("#debit").tooltip({
         classes: {
-            "ui-tooltip": "highlight"// enlever??
+            "ui-tooltip": "highlight"
+        }
+    });
+    $("#terminer-tooltip").tooltip({
+        classes: {
+            "ui-tooltip": "highlight"
         }
     });
 
