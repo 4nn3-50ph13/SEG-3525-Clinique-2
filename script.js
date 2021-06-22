@@ -20,9 +20,27 @@ let tovalidate = [
         isentered: 0
     },
     {
-        tag: 'service',
+        tag: 'debit',
         value:'',
         isentered: 0
+    }
+]
+let specialists = [
+    {
+        tag: '1',
+        value:'123'
+    },
+    {
+        tag: '2',
+        value:'123'
+    },
+    {
+        tag: '3',
+        value:'13'
+    },
+    {
+        tag: '4',
+        value:'4567'
     }
 ]
 setServices();
@@ -46,6 +64,21 @@ function setServices(){
     localStorage.setItem('tovalidate', JSON.stringify(toV));
 }
 
+function setSpecialists(){
+    var a = document.getElementById("service").value;
+    if (a!="default"){
+        var b = parseInt(a);
+        console.log("b "+b);
+        for (var i = 0; i < specialists.length; i++){
+            if (!specialists[i].value.includes(a)){
+                console.log("spec.tag "+specialists[i].tag);
+                $("#specialiste option[value='"+specialists[i].tag+"']").hide();
+            }else{
+                $("#specialiste option[value='"+specialists[i].tag+"']").show();
+            }
+        }
+    }
+}
 // Function to verify that the phone number is correct.
 function validatePhone(txtPhone) {
     var a = document.getElementById(txtPhone).value;
@@ -70,21 +103,26 @@ function validateNom(nom) {
     var a = document.getElementById(nom).value;
     return a.length > 0;
 }
+// Function to verify that the debit is correct.
+function validateDebit(debit) {
+    var a = document.getElementById(debit).value;
+    return (/^[0-9- ]*$/.test(a) && a.length > 13 && a.length < 17);
+}
 // Function to verify that the service is correct.
 function validateService(service) {
     var a = document.getElementById(service).value;
     return (a!="default");
 }
+// Function to verify that the specialist is correct.
+function validateSpecialiste(specialiste) {
+    var a = document.getElementById(specialiste).value;
+    return (a!="default");
+}
 
 
 // Using date restrictions on datepicker
-// Document of datepicker is here: https://api.jqueryui.com/datepicker/
-// The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
-// Make sure in your version that you associate Days to remove with Experts (e.g. John doesn't work Mondays)
-// var availableDates = ["06/29/2020","07/07/2020","07/10/2020"];
-
 //                     all    steph    megan    lola   emma & ellavar 
-var availableDates = [['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Dimanche'],['Lundi','Jeudi','Vendredi','Dimanche'],['Jeudi','Dimanche'],['Lundi','Mardi','Mercredi','Jeudi','Vendredi'],['Lundi','Mardi','Jeudi','Dimanche']];
+var availableDates = [[],['Lundi','Jeudi','Vendredi','Dimanche'],['Jeudi','Dimanche'],['Lundi','Mardi','Mercredi','Jeudi','Vendredi'],['Lundi','Mardi','Jeudi','Dimanche']];
 
 const setDateFormat = "dd/MM/yy";
 
@@ -102,7 +140,6 @@ $(document).ready(function(){
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
             alert("Attention! Le numéro de téléphone entré n'est pas du format xxx xxx xxxx");
-            $("#phone").val("xxx xxx xxxx");
             tovalidate[3].isentered = 0;
             setServices();
             toNext()
@@ -116,7 +153,6 @@ $(document).ready(function(){
     $("#email").on("change", function(){
         if (!validateMail("email")){
             alert("Attention! Le courriel entré n'est pas valide.");
-            $("#email").val("[xxx]@[xxx].[xxx]");
             tovalidate[2].isentered = 0;
             setServices();
             toNext()
@@ -130,7 +166,6 @@ $(document).ready(function(){
     $("#prenom").on("change", function(){
         if (!validatePrenom("prenom")){
             alert("Attention! Le courriel entré n'est pas valide.");
-            $("#prenom").val("");
             tovalidate[0].isentered = 0;
             setServices();
             toNext()
@@ -144,19 +179,19 @@ $(document).ready(function(){
     $("#nom").on("change", function(){
         if (!validateNom("nom")){
             alert("Attention! Le courriel entré n'est pas valide.");
-            $("#nom").val("");
             tovalidate[1].isentered = 0;
             setServices();
+            toNext()
         }
         else {
             tovalidate[1].isentered = 1;
             setServices();
+            toNext()
         }
     });
-    $("#service").on("change", function(){
-        if (!validateService("service")){
-            alert("Attention! Vous n'avez pas choisi un service!");
-            $("#service").val("");
+    $("#debit").on("change", function(){
+        if (!validateDebit("debit")){
+            alert("Attention! Le numéro de carte entré n'est pas valide.");
             tovalidate[4].isentered = 0;
             setServices();
             toNext()
@@ -167,15 +202,30 @@ $(document).ready(function(){
             toNext()
         }
     });
+    $("#service").on("change", function(){
+        if (!validateService("service")){
+            alert("Attention! Vous n'avez pas choisi un service!");
+            tovalidate[4].isentered = 0;
+            setServices();
+            $("#specialiste").prop("disabled",true);
+        }
+        else {
+            $("#specialiste").prop("disabled",false);
+            tovalidate[4].isentered = 1;
+            setSpecialists();
+        }
+    });
     $("#specialiste").on("change", function(){
         specialiste = $("#specialiste").val();
         if (specialiste > 0){
-            $("#terminer").prop("disabled",false);
+            $("#date-picker").prop("disabled",false);
         }else {
-            $("#terminer").prop("disabled",true);
+            $("#date-picker").prop("disabled",true);
         }
     });
-
+    $("#date-picker").on("change", function(){
+        $("#terminer").prop("disabled",false);
+    });
     $("#date-picker").datepicker(
         {
             dateFormat: setDateFormat,
@@ -220,7 +270,17 @@ $(document).ready(function(){
             "ui-tooltip": "highlight"
         }
     });
-    $("#terminer-tooltip").tooltip({
+    $("#toDate-tooltip").tooltip({
+        classes: {
+            "ui-tooltip": "highlight"
+        }
+    });
+    $("#aaaa").tooltip({
+        classes: {
+            "ui-tooltip": "highlight"
+        }
+    });
+    $("#terminer").tooltip({
         classes: {
             "ui-tooltip": "highlight"
         }
