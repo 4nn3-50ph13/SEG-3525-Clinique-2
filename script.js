@@ -28,19 +28,23 @@ let tovalidate = [
 let specialists = [
     {
         tag: '1',
-        value:'123'
+        value:'123',
+        heures:[2,3,4,5,6,7]
     },
     {
         tag: '2',
-        value:'123'
+        value:'123',
+        heures:[3,4,5,6,7]
     },
     {
         tag: '3',
-        value:'13'
+        value:'13',
+        heures:[2,3,4,5]
     },
     {
         tag: '4',
-        value:'4567'
+        value:'4567',
+        heures:[4,5,6]
     }
 ]
 setServices();
@@ -68,13 +72,30 @@ function setSpecialists(){
     var a = document.getElementById("service").value;
     if (a!="default"){
         var b = parseInt(a);
-        console.log("b "+b);
         for (var i = 0; i < specialists.length; i++){
             if (!specialists[i].value.includes(a)){
-                console.log("spec.tag "+specialists[i].tag);
                 $("#specialiste option[value='"+specialists[i].tag+"']").hide();
             }else{
                 $("#specialiste option[value='"+specialists[i].tag+"']").show();
+            }
+        }
+    }
+}
+function setHeure(){
+    var a = document.getElementById("specialiste").value;
+    if (a!="default"){
+        var b = parseInt(a)-1;
+
+        console.log(b);
+        console.log(specialists[b]);
+        console.log(specialists[b].heures);
+        var hours = specialists[b].heures;
+
+        for (var i = 1; i < 8; i++){
+            if (hours.includes(i)){
+                $("#heure option[value='"+i+"']").show();
+            }else{
+                $("#heure option[value='"+i+"']").hide();
             }
         }
     }
@@ -117,8 +138,7 @@ function validateService(service) {
 function validateSpecialiste(specialiste) {
     var a = document.getElementById(specialiste).value;
     return (a!="default");
-}
-
+} // enlever??
 
 // Using date restrictions on datepicker
 //                     all    steph    megan    lola   emma & ellavar 
@@ -219,9 +239,12 @@ $(document).ready(function(){
         specialiste = $("#specialiste").val();
         if (specialiste > 0){
             $("#date-picker").prop("disabled",false);
+            $("#heure").prop("disabled",false);
         }else {
             $("#date-picker").prop("disabled",true);
+            $("#heure").prop("disabled",true);
         }
+        setHeure();
     });
     $("#date-picker").on("change", function(){
         $("#terminer").prop("disabled",false);

@@ -805,23 +805,32 @@
               <h1 class="small-disp">Date :</h1>
               <br>
               <div class="col-sm-12 col-md-6">
-                <input type="text" id="date-picker" name="date-picker" class="datepicker pic form-control" placeholder="Date">
+                <input type="text" id="date-picker" name="date-picker" class="datepicker pic form-select form-select-lg" placeholder="Date">
               </div>
-              <div class="col-sm-12 col-md-6">
-                <input type="time" id="time-picker" class="pic col-sm-12 col-md-6 form-control">
+              <div class="pic col-sm-12 col-md-6">
+                  <select class="form-select form-select-lg" id="heure" disabled>
+                    <option selected value="default">Heure</option>
+                    <option value="1">8h</option>
+                    <option value="2">10h</option>
+                    <option value="3">11h30</option>
+                    <option value="4">13h</option>
+                    <option value="5">17h</option>
+                    <option value="6">20h</option>
+                    <option value="7">22h30</option>
+                  </select>
               </div>
             </div>
             <br>
-            <div class="modal-footer d-flex justify-content-between">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-              <div class="d-flex flex-row">
-                <button class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="fas fa-chevron-left"></i> Date et heure</button>
-                <a data-toggle="tooltip" data-placement="top" title="Veuillez remplir le formulaire pour continuer!">
-                  <button class="btn btn-primary" data-bs-target="#modal-merci" data-bs-toggle="modal" data-bs-dismiss="modal" id="terminer" title="Veuillez terminer le formulaire" disabled>Terminer<i class="fas fa-chevron-right"></i></button>
-                </a>
-              </div>
-            </div>
           </form>
+          <div class="modal-footer d-flex justify-content-between">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <div class="d-flex flex-row">
+              <button class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="fas fa-chevron-left"></i> Date et heure</button>
+              <a data-toggle="tooltip" data-placement="top" title="Veuillez remplir le formulaire pour continuer!">
+                <button class="btn btn-primary" data-bs-target="#modal-merci" data-bs-toggle="modal" data-bs-dismiss="modal" id="terminer" title="Veuillez terminer le formulaire" disabled>Terminer<i class="fas fa-chevron-right"></i></button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
