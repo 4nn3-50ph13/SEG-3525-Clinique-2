@@ -38,12 +38,12 @@ let specialists = [
     },
     {
         tag: '3',
-        value:'13',
+        value:'137',
         heures:[2,3,4,5]
     },
     {
         tag: '4',
-        value:'4567',
+        value:'456890',
         heures:[4,5,6]
     }
 ]
@@ -128,11 +128,6 @@ function validateNom(nom) {
 function validateDebit(debit) {
     var a = document.getElementById(debit).value;
     return (/^[0-9- ]*$/.test(a) && a.length > 13 && a.length < 17);
-}
-// Function to verify that the service is correct.
-function validateService(service) {
-    var a = document.getElementById(service).value;
-    return (a!="default");
 }
 // Function to verify that the specialist is correct.
 function validateSpecialiste(specialiste) {
@@ -223,30 +218,17 @@ $(document).ready(function(){
         }
     });
     $("#service").on("change", function(){
-        if (!validateService("service")){
-            alert("Attention! Vous n'avez pas choisi un service!");
-            tovalidate[4].isentered = 0;
-            setServices();
-            $("#specialiste").prop("disabled",true);
-        }
-        else {
-            $("#specialiste").prop("disabled",false);
-            tovalidate[4].isentered = 1;
-            setSpecialists();
-        }
+        $("#specialiste").prop("disabled",false);
+        setSpecialists();
     });
     $("#specialiste").on("change", function(){
-        specialiste = $("#specialiste").val();
-        if (specialiste > 0){
-            $("#date-picker").prop("disabled",false);
-            $("#heure").prop("disabled",false);
-        }else {
-            $("#date-picker").prop("disabled",true);
-            $("#heure").prop("disabled",true);
-        }
+        specialiste = document.getElementById("specialiste").value;
         setHeure();
     });
     $("#date-picker").on("change", function(){
+        $("#heure").prop("disabled",false);
+    });
+    $("#heure").on("change", function(){
         $("#terminer").prop("disabled",false);
     });
     $("#date-picker").datepicker(
@@ -308,8 +290,21 @@ $(document).ready(function(){
             "ui-tooltip": "highlight"
         }
     });
-
-
+    $("#email").tooltip({
+        classes: {
+            "ui-tooltip": "highlight"
+        }
+    });
+    $("#phone").tooltip({
+        classes: {
+            "ui-tooltip": "highlight"
+        }
+    });
+    $("#hhh").tooltip({
+        classes: {
+            "ui-tooltip": "highlight"
+        }
+    });
 });
 
 function toNext(){
@@ -330,7 +325,7 @@ function toNext(){
 
 var height1 = $("header").height();
 var height2 = $("nav").height();
-
+ 
 $(window).scroll(function(){
     if($(this).scrollTop() > height1){
         $('.general-nav').addClass('fixed');

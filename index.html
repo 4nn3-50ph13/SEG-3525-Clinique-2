@@ -737,17 +737,17 @@
                 
               </div>
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="email" placeholder="Addresse courriel" required>
+                <input type="email" class="form-control" id="email" title="courriel@exemple.ca"  placeholder="Addresse courriel" required>
                 <label class="mx-2" for="email"><i class="fas fa-at" style="color:var(--accent-color1)"></i> Addresse courriel</label>
                 
               </div>
               <div class="form-floating mb-3">
-                <input type="tel" class="form-control" id="phone" placeholder="Numéro de téléphone" required>
+                <input type="tel" class="form-control" id="phone" title="xxx-xxx-xxxx"  placeholder="Numéro de téléphone" required>
                 <label class="mx-2" for="phone"><i class="fas fa-phone" style="color:var(--accent-color1)"></i> Numéro de téléphone</label>
                 
               </div>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="debit" title="On vous demande un dépot de 20$." placeholder="Carte de crédit">
+                <input type="text" class="form-control" id="debit" title="On vous demande un dépot de 20$ en cas d'annulation." placeholder="Carte de crédit">
                 <label class="mx-2" for="debit"><i class="fas fa-credit-card" style="color:var(--accent-color1)"></i> Carte de crédit</label>
               </div>
           </form>
@@ -774,50 +774,61 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times" style="color: var(--text-color-dark);"></i></button>
         </div>
         <div class="modal-body">
-          <form class="needs-validation" novalidate>
+          <form class="needs-validation">
             <div class="progress mb-3 shadow2" style="background-color: var(--background-color-light);">
               <div class="progress-bar" role="progressbar" style="width: 33.34%;background-color: var(--accent-color1);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Vos informations</div>
               <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: var(--accent-color2);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Date et heure</div>
               <div class="progress-bar" role="progressbar" style="width: 33.4%;background-color: var(--background-color-dark1);" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Terminer</div>
             </div>
             <div class="form-group form-control-lg">
-                <select class="form-select form-select-lg" id="service">
-                  <option selected value="default">Choisissez un service</option>
+              <select name="service" class="form-select form-select-lg" id="service">
+                <option disabled selected>Choisissez un service</option>
+                <optgroup label="Services vétérinaires">
                   <option value="1">Check-up</option>
                   <option value="2">Chirurgies</option>
                   <option value="3">Test d'allergies</option>
+                </optgroup>
+                <optgroup label="Leçons">
                   <option value="4">Leçons d'agileté</option>
                   <option value="5">Leçons de socialisation</option>
                   <option value="6">Leçons de comportementé</option>
                   <option value="7">Leçons d'aquaforme</option>
-                </select>
+                </optgroup>
+                <optgroup label="Services de beauté">
+                  <option value="8">Soins express</option>
+                  <option value="9">Soins classiques</option>
+                  <option value="0">Soins de luxe</option>
+                </optgroup>
+              </select>
             </div>
+
             <div class="form-group form-control-lg" id="aaaa" title="Veuillez choisir un service">
-                <select class="form-select form-select-lg" id="specialiste" disabled>
-                  <option selected value="0">Choisissez un spécialiste</option>
-                  <option value="1">Dr Stephanie</option>
-                  <option value="2">Dr Megan</option>
-                  <option value="3">Lola</option>
-                  <option value="4">Emma & Ella</option>
-                </select>
+              <select name="specialiste" class="form-select form-select-lg" id="specialiste" disabled>
+                <option disabled selected value="0">Choisissez une spécialiste</option>
+                <option value="1">Dr Stephanie</option>
+                <option value="2">Dr Megan</option>
+                <option value="3">Lola</option>
+                <option value="4">Emma & Ella</option>
+              </select>
             </div>
+
             <div class="md-form row d-flex justify-content-center m-2">
               <h1 class="small-disp">Date :</h1>
               <br>
-              <div class="col-sm-12 col-md-6">
+              <div class="col-sm-12 col-md-6 form-group form-control-lg">
                 <input type="text" id="date-picker" name="date-picker" class="datepicker pic form-select form-select-lg" placeholder="Date">
               </div>
-              <div class="pic col-sm-12 col-md-6">
-                  <select class="form-select form-select-lg" id="heure" disabled>
-                    <option selected value="default">Heure</option>
-                    <option value="1">8h</option>
-                    <option value="2">10h</option>
-                    <option value="3">11h30</option>
-                    <option value="4">13h</option>
-                    <option value="5">17h</option>
-                    <option value="6">20h</option>
-                    <option value="7">22h30</option>
-                  </select>
+              <div class="col-sm-12 col-md-6 form-group form-control-lg" id="hhh" title="Veuillez choisir une spécialiste">
+                <select name="service" class="form-select form-select-lg" id="heure" disabled>
+                  <option disabled selected value="default">Heure</option>
+                  <option value="1">8h</option>
+                  <option value="2">10h</option>
+                  <option value="3">11h30</option>
+                  <option value="4">13h</option>
+                  <option value="5">17h</option>
+                  <option value="6">20h</option>
+                  <option value="7">22h30</option>
+                </select>
               </div>
             </div>
             <br>
